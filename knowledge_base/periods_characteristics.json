@@ -1,0 +1,62 @@
+{
+  "periods": {
+    "16th Century": {
+      "period_name": "16th Century (c. 1550 - 1605, Early Mughal / Akbar Reign)",
+      "historical_context": "Formation of Imperial Mughal atelier under Akbar, synthesis of Persian Safavid masters (Mir Sayyid Ali, Abd al-Samad) with indigenous Indian artists.",
+      "stylistic_markers": [
+        "Vibrant narrative dynamism, diagonal crowded compositions full of movement and action",
+        "Multiple artists collaborating on single folios (outline by master, coloring by assistant)",
+        "Persian high horizon lines and tiered spatial planes blending with Indian earthy vigor",
+        "Vigorous, bold brushwork capturing architectural construction, battle scenes, and hunts",
+        "Illustrations of epic historical chronicles (Hamzanama, Tutinama, Akbarnama, Razmnama)"
+      ],
+      "pigments_materials": "Coarser mineral pigments, organic dyes, hand-made Sialkot paper, vigorous burnishing."
+    },
+    "Early 17th Century": {
+      "period_name": "Early 17th Century (c. 1605 - 1627, Jahangir Reign)",
+      "historical_context": "Shift from collective manuscript production to individualized connoisseurship and single-page album (muraqqa) paintings.",
+      "stylistic_markers": [
+        "Supreme psychological realism, acute naturalistic observation, and refined delicate brushwork",
+        "Extraordinary flora and fauna studies (birds, animals, flowers) commissioned by Jahangir",
+        "European Renaissance influence: subtle chiaroscuro, golden divine halos, winged cherubs in skies",
+        "Individual master artist attribution prominently recorded by the Emperor himself",
+        "Muraqqa albums with sumptuous wide calligraphic and illuminated floral borders"
+      ],
+      "pigments_materials": "Ultra-refined lapis lazuli, malachite, cinnabar, shell gold ink (hallkari)."
+    },
+    "Mid 17th Century": {
+      "period_name": "Mid 17th Century (c. 1628 - 1658, Shah Jahan Reign)",
+      "historical_context": "Imperial grandeur, architectural perfection, courtly ritual and frozen formal majesty.",
+      "stylistic_markers": [
+        "Strict formal symmetry, imperial stillness, and crystalline architectural clarity",
+        "En-face and strict profile court portraits with jewel-encrusted thrones and weapons",
+        "Opulent application of heavy gold leaf (gilding) and polished surface finish",
+        "Diminished dynamic narrative action in favor of ceremonial darbar scenes and romantic night terraces",
+        "Padshahnama manuscript illustrating royal court rituals and historical events"
+      ],
+      "pigments_materials": "Heavy gold leaf, powdered pearls, intense burnishing producing porcelain-like sheen."
+    },
+    "Late 17th Century": {
+      "period_name": "Late 17th Century (c. 1658 - 1707, Aurangzeb Reign)",
+      "historical_context": "Decline of imperial Mughal patronage; migration of court artists to regional Rajput, Pahari, and Deccani centers.",
+      "stylistic_markers": [
+        "More austere, subdued color palettes at the Mughal court; strict formal portraiture",
+        "Flowering of regional styles in Rajasthan and Deccan enriched by displaced imperial masters",
+        "Simpler backgrounds with pale celadon green or grey washes replacing opulent architectural gold",
+        "Increased production of religious, mythological, and Ragamala series in regional ateliers"
+      ],
+      "pigments_materials": "Mix of indigenous regional pigments with refined Mughal techniques."
+    },
+    "18th Century": {
+      "period_name": "18th Century (c. 1707 - 1799, Later Mughal, Rajput, and Pahari Flowering)",
+      "historical_context": "Golden age of Rajput (Mewar, Bundi, Kota, Kishangarh) and early Pahari (Basohli, Guler, Kangra) schools.",
+      "stylistic_markers": [
+        "Rich emotional expression, lyrical lines, and profound romantic and devotional themes",
+        "Spectacular Ragamala, Barahmasa (seasons), and Gitagovinda series",
+        "Kishangarh's romantic vision under Savant Singh; Kangra's supreme poetic beauty under Sansar Chand",
+        "Intense color grounds in Rajasthan contrasted with serene pastel hillscapes in Himachal"
+      ],
+      "pigments_materials": "Locally sourced mineral clays, peori yellow, kajal black, gold powders on layered wasli paper."
+    }
+  }
+}

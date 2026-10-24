@@ -1,0 +1,126 @@
+{
+  "schools": {
+    "Mughal": {
+      "school_name": "Mughal",
+      "geography": "Imperial capitals (Delhi, Agra, Lahore, Fatehpur Sikri)",
+      "stylistic_signatures": [
+        "Muted realistic naturalism and fine psychological portraiture",
+        "Minute stippling technique (pardaz) creating delicate tonal modeling and volume",
+        "Atmospheric depth, aerial perspective, and receding landscape influenced by European prints",
+        "Intricate decorative floral and calligraphic borders (hashiya) with real gold leaf illumination",
+        "Accurate architectural representation of red sandstone, marble jalis, and Mughal chhatris"
+      ],
+      "color_palette": [
+        "Subdued, sophisticated, naturalistic earth tones",
+        "Lapis lazuli blues, malachite greens, terra-cotta, muted pinks",
+        "Refined gilding (gold powder and burnished gold leaf)"
+      ],
+      "facial_anatomy": "Three-quarter profile or strict profile, individualized features, naturalistic eyelids and jawlines",
+      "notable_masters": ["Basawan", "Miskin", "Daswanth", "Manohar", "Ustad Mansur", "Govardhan", "Bishandas", "Abu'l Hasan"]
+    },
+    "Mewar": {
+      "school_name": "Mewar (Udaipur / Chawand)",
+      "geography": "Mewar region, Rajasthan (Udaipur, Chawand)",
+      "stylistic_signatures": [
+        "Vibrant, intensely saturated flat color grounds without atmospheric perspective",
+        "Compartmentalized architectural frames dividing narrative episodes",
+        "Bold expressive contours and rhythmic stylized patterns",
+        "Lush stylized flora with cluster-leaf trees and ornamental flowering plants",
+        "Fish-scale patterns for water bodies with floating lotuses and water birds"
+      ],
+      "color_palette": [
+        "Intense lacquer red (hinglu / lac)",
+        "Bright turmeric yellow (peori)",
+        "Deep ultramarine blue and opaque white highlights"
+      ],
+      "facial_anatomy": "Distinctive large fish-shaped or almond eyes, prominent straight noses, heavy chins, male figures with short beards and transparent jama",
+      "notable_masters": ["Sahibdin", "Nasiruddin (Nisardi)", "Manohar (Mewar)"]
+    },
+    "Bundi": {
+      "school_name": "Bundi",
+      "geography": "Hadoti region, Rajasthan (Bundi)",
+      "stylistic_signatures": [
+        "Dramatic, lush natural landscapes with dense tropical forests, banana plants, and mango groves",
+        "Sensuous female figures with round faces, small pointed chins, and curving silhouettes",
+        "Deep water tanks and lakes teeming with lotus blooms, fish, and aquatic birds",
+        "Turbulent monsoon skies with coiling serpent-shaped lightning and dark rain clouds tinged with gold",
+        "Intense poetic mood highlighting romantic yearning (shringara)"
+      ],
+      "color_palette": [
+        "Rich emerald green and olive greens",
+        "Luminous glowing oranges and saffron yellows",
+        "Deep indigo blues and vibrant crimson accents"
+      ],
+      "facial_anatomy": "Round feminine faces, sharp noses, arched eyebrows extending to temples, full lips",
+      "notable_masters": ["Master of the Bundi Ragamala"]
+    },
+    "Kotah": {
+      "school_name": "Kotah (Kota)",
+      "geography": "Hadoti region, Rajasthan (Kota)",
+      "stylistic_signatures": [
+        "Monumental dynamic hunting scenes in rugged, rocky hilly jungles",
+        "Swirling, panoramic composition depicting wild elephants, tigers, and boars",
+        "Dense foliage rendered with repetitive, highly rhythmic leaf stippling",
+        "Expansive panoramic format capturing movement, smoke from muskets, and charging animals"
+      ],
+      "color_palette": [
+        "Earthy olive greens, sage, moss, and ochre rock tones",
+        "Dark stormy indigo skies",
+        "White splashing water and golden highlights"
+      ],
+      "facial_anatomy": "Stout, energetic figures with rounded features, intense focused expressions",
+      "notable_masters": ["Kota Master", "Sheikh Taju"]
+    },
+    "Kangra": {
+      "school_name": "Kangra (Pahari)",
+      "geography": "Kangra valley, Himachal Pradesh (Pahari region)",
+      "stylistic_signatures": [
+        "Lyrical, rhythmic flowing lines and supreme delicate grace",
+        "Serene, idealized romantic atmosphere focused on Radha-Krishna bhakti devotion",
+        "Soft rolling hillscapes with flowering trees, meandering streams, and distant white pavilions",
+        "Nocturnal storm scenes rendered with exquisite subtle lightning and swaying willows",
+        "Feminine figures epitomizing classical Indian poetic ideals of delicate charm"
+      ],
+      "color_palette": [
+        "Cool, delicate pastel harmonies",
+        "Soft pinks, pale moss greens, gentle mauves, milky whites, and rich midnight blues",
+        "Gold trim on gossamer-thin transparent dupattas"
+      ],
+      "facial_anatomy": "Pure profile with forehead and nose in a continuous straight line, gently curving lotus-petal eyes, soft rounded cheeks",
+      "notable_masters": ["Nainsukh family", "Manaku", "Purkhu", "Fattu"]
+    },
+    "Kishangarh": {
+      "school_name": "Kishangarh",
+      "geography": "Central Rajasthan (Kishangarh state)",
+      "stylistic_signatures": [
+        "Highly stylized, exaggerated courtly romance (the famous 'Bani Thani' aesthetic)",
+        "Sweeping panoramic lake landscapes with serene boats, pavilions, and twilight waters",
+        "Radha and Krishna portrayed as aristocratic courtly lovers in mystical garden pavilions",
+        "Tall, willow-slender aristocratic figures with serpentine graceful poses"
+      ],
+      "color_palette": [
+        "Luminous twilight hues: silver, pearlescent white, rose pink, turquoise blue, and gold",
+        "Glow of lanterns reflecting on dark lake waters"
+      ],
+      "facial_anatomy": "Exaggerated curved upward-pointing eyebrows, lotus-bud elongated eyes, sharply pointed nose, long arched neck",
+      "notable_masters": ["Nihal Chand", "Sitaram"]
+    },
+    "Deccan": {
+      "school_name": "Deccan",
+      "geography": "Deccan Sultanates (Bijapur, Golconda, Ahmadnagar)",
+      "stylistic_signatures": [
+        "Mystical, dream-like poetic atmosphere with rich Persian and Turkish design affinities",
+        "Heavily embossed and burnished raised gold work (gilding) on costumes and architecture",
+        "Swirling, ornamental Chinese/Persian-style cloud spirals (chi clouds)",
+        "Elongated, tall figures with voluminous turbans and cascading sashes",
+        "Unusual, surreal landscape compositions with fantastical rock formations"
+      ],
+      "color_palette": [
+        "Opulent mineral colors: deep purple, luminous violet, turquoise, copper, and burnished gold",
+        "Rich chocolate brown and dark emerald grounds"
+      ],
+      "facial_anatomy": "Slightly plump oval faces, long introspective almond eyes, refined aristocratic poise",
+      "notable_masters": ["Farrukh Husain", "Bodleian Painter", "Ali Adil Shah atelier"]
+    }
+  }
+}

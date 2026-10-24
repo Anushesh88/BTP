@@ -1,0 +1,22 @@
+2026-10-21 12:08:15,698 [INFO] === STEP 1: Ingesting Manifest & Grouped Splits ===
+2026-10-21 12:08:15,787 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 12:08:15,787 [INFO] === STEP 2: Loading Trained Multi-Head Model (models\multihead_fused_classifier.pt) ===
+2026-10-21 12:08:15,866 [INFO] Multi-Head checkpoint successfully loaded from: models\multihead_fused_classifier.pt
+2026-10-21 12:08:15,867 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 12:08:16,499 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 12:08:16,747 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-21 12:08:16,748 [INFO] Loading cached fused features from: data\cache\fused_val_vit_b_16.npz
+2026-10-21 12:08:16,752 [INFO] Loading cached fused features from: data\cache\fused_test_vit_b_16.npz
+2026-10-21 12:08:16,755 [INFO] === STEP 3: Computing Validation Logits & Fitting Temperature Scalers ===
+2026-10-21 12:08:16,884 [INFO] Fitting temperature scaling for head: 'raga' (85 samples)...
+2026-10-21 12:08:16,898 [INFO] Learned optimal temperature T = 0.8276
+2026-10-21 12:08:16,898 [INFO] Fitting temperature scaling for head: 'school' (85 samples)...
+2026-10-21 12:08:16,901 [INFO] Learned optimal temperature T = 1.5180
+2026-10-21 12:08:16,901 [INFO] Fitting temperature scaling for head: 'period' (52 samples)...
+2026-10-21 12:08:16,903 [INFO] Learned optimal temperature T = 0.8606
+2026-10-21 12:08:16,903 [INFO] Fitting temperature scaling for head: 'artist' (85 samples)...
+2026-10-21 12:08:16,907 [INFO] Learned optimal temperature T = 0.0540
+2026-10-21 12:08:16,907 [INFO] Saved temperature scalers to models\temperature_scalers.json
+2026-10-21 12:08:16,907 [INFO] === STEP 4: Evaluating Calibration (ECE, MCE, Brier Score) on Test Split ===
+2026-10-21 12:08:17,993 [INFO] Saved reliability diagrams to reports\reliability_diagrams.png
+2026-10-21 12:08:17,996 [INFO] Phase 8 Calibration Report generated at: reports\calibration_report.md

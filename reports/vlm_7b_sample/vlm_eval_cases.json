@@ -1,0 +1,2198 @@
+{
+  "classifier_source": "Phase 7 multi-head fused classifier (temperature-calibrated)",
+  "vlm_model": "qwen2.5vl:7b",
+  "vlm_failures": 0,
+  "cases": [
+    {
+      "image_id": "ma-55333",
+      "ground_truth": {
+        "raga": "Shri Raga/Ragini",
+        "school": "Rajasthani",
+        "period": null,
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.9,
+          "iconographic_evidence": [
+            "The painting depicts a courtly scene with two figures in elaborate attire, which is not characteristic of Ragamala illustrations."
+          ]
+        },
+        "predicted_school": {
+          "value": "Rajasthani",
+          "confidence": 1.0,
+          "stylistic_evidence": [
+            "The use of rich colors and detailed costumes are typical of Rajasthani paintings.",
+            "The architectural elements, such as the chhatris (domed pavilions), suggest a connection to Mewar or Bundi styles."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.9,
+          "evidence": [
+            "The architectural style and the use of vibrant colors are indicative of late Mughal art.",
+            "The courtly scene with two figures in elaborate attire is characteristic of paintings from this period."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.9,
+          "evidence": [
+            "No inscribed attribution or signature can be identified within the image.",
+            "The style and motifs are consistent with artists active in Mewar during this period."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (turban)",
+            "observation": "A turban is depicted, which aligns with Rajasthani courtly scenes.",
+            "supports": ""
+          },
+          {
+            "region": "crop_2 (peacock)",
+            "observation": "The peacock motif appears in the background, a common element in Mewar and Bundi paintings.",
+            "supports": ""
+          },
+          {
+            "region": "crop_3 (building)",
+            "observation": "A chhatris structure is visible above the figures, typical of Rajasthani architecture.",
+            "supports": ""
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.73) vs VLM='Non-Ragamala' (conf=0.90)",
+          "route_to_expert_review": true,
+          "review_reason": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.73) vs VLM='Non-Ragamala' (conf=0.90)"
+        },
+        "synthesis_rationale": "This painting is identified as non-Ragamala due to the absence of musical-mode personifications or inscriptions. The rich colors, detailed costumes, and chhatris structure are indicative of Rajasthani art from the late Mughal period in India's central region."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Ragamala (Unspecified)",
+            0.7319009900093079
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.17964912950992584
+          ],
+          [
+            "Ragamala (Other)",
+            0.06333319842815399
+          ]
+        ],
+        "school": [
+          [
+            "Rajasthani",
+            0.957239031791687
+          ],
+          [
+            "Mughal",
+            0.04276100546121597
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.3939249515533447
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.2533736824989319
+          ],
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.10029730945825577
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            8.825732050484344e-26
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "FS-8091_09",
+      "ground_truth": {
+        "raga": "Ragamala (Unspecified)",
+        "school": "Rajasthani",
+        "period": null,
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting does not depict a Ragamala composition or musical-mode personification."
+          ]
+        },
+        "predicted_school": {
+          "value": "Rajasthani",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The architectural style of the pavilion, use of rich colors and gold leaf, and the depiction of a nayika (idealized female figure) in traditional Rajput attire."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.75,
+          "evidence": [
+            "The architectural style and use of gold leaf are indicative of the late Mughal period, while the rich color palette aligns with Rajput art."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.65,
+          "evidence": [
+            "No inscribed attribution is visible in this painting; however, it reflects a style typical of artists active during the late Mughal and Rajput periods."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (building)",
+            "observation": "The architectural pavilion with chhatris is characteristic of Rajasthani art.",
+            "supports": "Rajasthani school"
+          },
+          {
+            "region": "crop_2 (bird)",
+            "observation": "Birds are often used as decorative elements in Rajput paintings, especially in the Mewar and Bundi schools.",
+            "supports": "Rajasthani school"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "Raga conflict: Classifier top-1='Shri Raga/Ragini' (p=0.48) vs VLM='Non-Ragamala' (conf=0.95)",
+          "route_to_expert_review": true,
+          "review_reason": "Raga conflict: Classifier top-1='Shri Raga/Ragini' (p=0.48) vs VLM='Non-Ragamala' (conf=0.95)"
+        },
+        "synthesis_rationale": "This painting depicts a nayika in traditional Rajput attire, engaging with another figure within an architectural pavilion. The use of gold leaf and rich colors is characteristic of late Mughal and early Rajasthani art periods. However, the absence of inscribed attribution makes it challenging to attribute this work definitively to any specific artist."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Shri Raga/Ragini",
+            0.4819319546222687
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.3948397636413574
+          ],
+          [
+            "Ragamala (Other)",
+            0.08145704865455627
+          ]
+        ],
+        "school": [
+          [
+            "Rajasthani",
+            0.8866094350814819
+          ],
+          [
+            "Mughal",
+            0.11339058727025986
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.30406454205513
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.2384576052427292
+          ],
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.16466186940670013
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            5.8090924431875024e-11
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "FS-5814_13",
+      "ground_truth": {
+        "raga": "Ragamala (Unspecified)",
+        "school": "Rajasthani",
+        "period": null,
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.9,
+          "iconographic_evidence": [
+            "The painting depicts a narrative scene with two women in an interior setting, which is not characteristic of Ragamala illustrations."
+          ]
+        },
+        "predicted_school": {
+          "value": "Rajasthani",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The use of rich colors and detailed patterns on the garments suggests a Rajasthani style.",
+            "The architectural elements, such as the pavilion with intricate detailing, are typical of Rajasthani art."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.7,
+          "evidence": [
+            "The refined color palette and architectural style align more closely with the late Mughal period, which influenced Rajasthani art."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.5,
+          "evidence": [
+            "No inscribed attribution or signature is visible in this image."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (building)",
+            "observation": "The architectural style with its intricate detailing and use of red sandstone suggests a Rajasthani influence.",
+            "supports": "Rajasthani school"
+          },
+          {
+            "region": "crop_2 (peacock)",
+            "observation": "The peacock is depicted in the foreground, which could be part of a narrative or symbolic element within this painting style.",
+            "supports": "Narrative scene depiction typical for Rajasthani art."
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.54) vs VLM='Non-Ragamala' (conf=0.90)",
+          "route_to_expert_review": true,
+          "review_reason": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.54) vs VLM='Non-Ragamala' (conf=0.90)"
+        },
+        "synthesis_rationale": "The painting depicts a narrative scene within an architectural setting, which does not align with Ragamala illustrations. The rich color palette and detailed architecture suggest Rajasthani influence, particularly from the late Mughal period when such styles were prevalent across India's northern regions. However, without inscribed attribution or further stylistic analysis of specific motifs that could confirm a particular artist, it is uncertain who created this work."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Ragamala (Unspecified)",
+            0.5376099944114685
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.364229679107666
+          ],
+          [
+            "Ragamala (Other)",
+            0.06684410572052002
+          ]
+        ],
+        "school": [
+          [
+            "Rajasthani",
+            0.9467449188232422
+          ],
+          [
+            "Mughal",
+            0.05325505509972572
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.36353909969329834
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.24786917865276337
+          ],
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.1340225487947464
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            8.713457241617945e-20
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "ma-45020",
+      "ground_truth": {
+        "raga": "Ragamala (Unspecified)",
+        "school": "Rajasthani",
+        "period": null,
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting depicts a courtly scene with musicians playing instruments in front of an architectural pavilion, which is not characteristic of Ragamala paintings."
+          ]
+        },
+        "predicted_school": {
+          "value": "Rajasthani",
+          "confidence": 0.95,
+          "stylistic_evidence": [
+            "The use of vibrant colors and detailed architecture are typical Rajasthani styles.",
+            "The architectural pavilion with domes is a common motif in Rajasthani paintings."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.95,
+          "evidence": [
+            "The style of the painting, including its color palette and architectural representation, aligns with late Mughal or early Rajasthani styles."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.7,
+          "evidence": [
+            "No inscribed attribution is visible in this image.",
+            "The style suggests a master of the period, but specific artist identification cannot be confirmed without further evidence."
+          ]
+        },
+        "authenticity_score": 95,
+        "region_evidence": [
+          {
+            "region": "crop_1 (building)",
+            "observation": "A detailed architectural pavilion with domes and intricate patterns.",
+            "supports": "Rajasthani style"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.65) vs VLM='Non-Ragamala' (conf=0.95)",
+          "route_to_expert_review": true,
+          "review_reason": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.65) vs VLM='Non-Ragamala' (conf=0.95)"
+        },
+        "synthesis_rationale": "The painting depicts a courtly scene with musicians playing instruments in front of an architectural pavilion, which does not align with typical Ragamala compositions. The vibrant colors, detailed architecture, and stylistic elements are characteristic of late Mughal or early Rajasthani styles, particularly the Rajput school."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Ragamala (Unspecified)",
+            0.6540310978889465
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.2700358033180237
+          ],
+          [
+            "Ragamala (Other)",
+            0.05299152806401253
+          ]
+        ],
+        "school": [
+          [
+            "Rajasthani",
+            0.9579252600669861
+          ],
+          [
+            "Mughal",
+            0.04207473620772362
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.3862702250480652
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.24811536073684692
+          ],
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.10889764875173569
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.6280711732621168e-23
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "FS-7407_27",
+      "ground_truth": {
+        "raga": "Ragamala (Unspecified)",
+        "school": "Pahari",
+        "period": null,
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting does not depict a musical-mode personification or any inscription panel naming a raga, which is characteristic of Ragamala paintings."
+          ]
+        },
+        "predicted_school": {
+          "value": "Rajasthani",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The painting features rich emotional expression and lyrical lines typical of Rajasthani art during the Golden Age, with a focus on romantic themes."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.75,
+          "evidence": [
+            "The painting's style aligns more closely with Rajasthani art of the late Mughal period, characterized by rich emotional expression and lyrical lines."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.9,
+          "evidence": [
+            "No inscribed attribution or stylistic signature is visible in this painting to identify a specific artist."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_2 (tree)",
+            "observation": "The tree with dense foliage and stylized leaves, typical of Rajasthani art.",
+            "supports": "Rajasthani style"
+          },
+          {
+            "region": "crop_4 (peacock)",
+            "observation": "A peacock in a naturalistic pose within the landscape is characteristic of Rajasthani paintings from this period and region.",
+            "supports": "Rajasthani style"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.69) vs VLM='Non-Ragamala' (conf=0.95)",
+          "route_to_expert_review": true,
+          "review_reason": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.69) vs VLM='Non-Ragamala' (conf=0.95)"
+        },
+        "synthesis_rationale": "The painting exhibits characteristics typical of Rajasthani art during the Golden Age under the late Mughal influence. The rich emotional expression, lyrical lines, and naturalistic depiction of a woman in an idyllic landscape are consistent with this period's artistic style. However, there is no inscribed attribution or stylistic signature to identify a specific artist."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Ragamala (Unspecified)",
+            0.6947876811027527
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.14379194378852844
+          ],
+          [
+            "Non-Ragamala",
+            0.09264074265956879
+          ]
+        ],
+        "school": [
+          [
+            "Rajasthani",
+            0.8492889404296875
+          ],
+          [
+            "Mughal",
+            0.1507110297679901
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.5209242701530457
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.20975174009799957
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.08612886071205139
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.875823717155187e-29
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "mughal_style_detailed_face_of_a_men_kept_hand_on_head",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The image does not depict a Ragamala composition or any musical-mode personification."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The subject's realistic naturalism and fine psychological portraiture are characteristic of the Mughal style.",
+            "The use of muted earth tones, lapis lazuli blues, and refined gilding aligns with Mughal painting techniques."
+          ]
+        },
+        "predicted_period": {
+          "value": "Classical Mughal (16th-17th Century)",
+          "confidence": 0.85,
+          "evidence": [
+            "The subject's realistic naturalism and fine psychological portraiture are characteristic of the Classical Mughal period.",
+            "The use of muted earth tones, lapis lazuli blues, and refined gilding aligns with painting techniques from this era."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.95,
+          "evidence": [
+            "No inscribed attribution is visible in the image.",
+            "The style does not definitively match any known Mughal master's work, but it aligns with a classical Mughal portrait."
+          ]
+        },
+        "authenticity_score": 80,
+        "region_evidence": [
+          {
+            "region": "crop_1 (turban)",
+            "observation": "The subject is wearing an elaborate turban typical of the Mughal style.",
+            "supports": "Mughal portraiture"
+          },
+          {
+            "region": "upper_sky",
+            "observation": "Monsoon clouds are visible in the upper sky, suggesting a specific time period and location within India's cultural context.",
+            "supports": "Classical Mughal period (16th-17th Century)"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting exhibits characteristics of the Mughal school, particularly in its realistic naturalism and fine psychological portraiture. The subject's attire is typical for this period, with a focus on detailed turbans and refined gilding. The presence of monsoon clouds suggests it might be from the Classical Mughal era (16th-17th Century). However, no inscribed attribution or specific stylistic hallmark definitively identifies an artist."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9963249564170837
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.00159145996440202
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.0010895353043451905
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9817516207695007
+          ],
+          [
+            "Rajasthani",
+            0.018248360604047775
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.8211998343467712
+          ],
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.06581373512744904
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.05988059565424919
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            4.764945870822357e-39
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "the_bag_of_gold_which_he_received_for_the_slave_girl_being_stolen_in_a_mosque_the_young_man_of_baghdad_tears_his_cloths__c_1560",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Akbar Period (c. 1556-1605)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting does not depict a musical-mode personification or any inscription naming a raga, which is characteristic of Ragamala paintings."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The architectural style with chhatris and detailed borders aligns with Mughal art.",
+            "The use of muted naturalistic colors is typical for the Mughal school."
+          ]
+        },
+        "predicted_period": {
+          "value": "Akbar Period (c. 1556-1605)",
+          "confidence": 0.7,
+          "evidence": [
+            "The architectural style and use of muted colors suggest a period before the later Mughal styles."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.9,
+          "evidence": [
+            "No inscribed attribution or stylistic signature is visible."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (building)",
+            "observation": "The architectural style with chhatris and detailed borders supports the Mughal school.",
+            "supports": "Mughal stylistic evidence"
+          },
+          {
+            "region": "upper_sky",
+            "observation": "Monsoon clouds are depicted, which is a common motif in Mughal paintings of this period.",
+            "supports": "Akbar Period context"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The architectural style with chhatris, muted naturalistic colors, and monsoon clouds are indicative of the Mughal school during the Akbar period. The lack of inscribed attribution or stylistic signature makes it challenging to attribute a specific artist. However, these elements do not align with Ragamala paintings."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9920036196708679
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.0034551445860415697
+          ],
+          [
+            "Ragamala (Other)",
+            0.002874785801395774
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9699726700782776
+          ],
+          [
+            "Rajasthani",
+            0.030027339234948158
+          ]
+        ],
+        "period": [
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.9742316603660583
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.006716558709740639
+          ],
+          [
+            "Late Mughal / 18th Century",
+            0.006106710527092218
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.7066991194843024e-30
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "hulagu_khan_giving_a_feast_and_dispensing_favor_upon_the_amirs_and_princes_from_a_chingiz-nama_book_of_chingiz_khan_of_t_c_15961600",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Akbar Period (c. 1556-1605)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "court scene with musicians"
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.87,
+          "stylistic_evidence": [
+            "muted realistic naturalism",
+            "intricate decorative floral and calligraphic borders (hashiya)"
+          ]
+        },
+        "predicted_period": {
+          "value": "Jahangir Period (c. 1605-1627)",
+          "confidence": 0.83,
+          "evidence": [
+            "accurate architectural representation of red sandstone, marble jalis and Mughal chhatris"
+          ]
+        },
+        "predicted_artist": {
+          "value": "Ustad Mansur",
+          "confidence": 0.95,
+          "evidence": [
+            "stippling technique (pardaz) creating delicate tonal modeling and volume",
+            "accurate architectural representation of red sandstone, marble jalis and Mughal chhatris"
+          ]
+        },
+        "authenticity_score": 87,
+        "region_evidence": [
+          {
+            "region": "crop_1 (turban)",
+            "observation": "individualized features with naturalistic eyelids",
+            "supports": "Mughal School"
+          },
+          {
+            "region": "upper_sky_monsoon_clouds",
+            "observation": "intricate decorative floral and calligraphic borders (hashiya) with real gold leaf illumination",
+            "supports": "Mughal School"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting exhibits the characteristic muted realistic naturalism and intricate decorative floral borders typical of Mughal art. The architectural representation, facial features with individualized eyelids, and stippling technique (pardaz) are indicative of Ustad Mansur's style during the Jahangir Period."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9564778208732605
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.03337769955396652
+          ],
+          [
+            "Ragamala (Other)",
+            0.005420533940196037
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9165142178535461
+          ],
+          [
+            "Rajasthani",
+            0.08348581939935684
+          ]
+        ],
+        "period": [
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.5499449372291565
+          ],
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.14767925441265106
+          ],
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.1288275569677353
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            8.208930719143054e-34
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "mughal_style_detailed_female_hands_with_traditional_mughal_clothing_clapping",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "peacock motif"
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "peacock motif",
+            "naturalistic facial features, muted tones"
+          ]
+        },
+        "predicted_period": {
+          "value": "Classical Mughal (16th-17th Century)",
+          "confidence": 0.92,
+          "evidence": [
+            "peacock motif",
+            "naturalistic facial features, muted tones"
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.85,
+          "evidence": []
+        },
+        "authenticity_score": 75,
+        "region_evidence": [
+          {
+            "region": "peacock (crop_1)",
+            "observation": "The presence of a peacock motif in the upper left corner",
+            "supports": "Mughal iconography"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "This image exhibits characteristics typical of the Classical Mughal period in India. The peacock motif is a common element found within Mughal art and often symbolizes royalty or divine beauty. The naturalistic facial features and muted color palette further support this attribution to the Mughal school, which was known for its sophisticated portraiture and use of subtle tones."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9794960618019104
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.011214502155780792
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.00510261720046401
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9282193779945374
+          ],
+          [
+            "Rajasthani",
+            0.07178060710430145
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.8347995281219482
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.09302264451980591
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.034539833664894104
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            9.11072413460816e-40
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Shah Jahan Period (c. 1628-1658)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting does not depict a musical-mode personification or any inscription naming a raga, which is characteristic of Ragamala paintings."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The figure's attire and the use of gold leaf suggest Mughal style.",
+            "The architectural pavilion in Crop 7 is typical of Mughal art."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.65,
+          "evidence": [
+            "The refined and sophisticated color palette, along with the architectural style in Crop 7, aligns more closely with late Mughal art."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.9,
+          "evidence": [
+            "No inscribed attribution is visible."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_7 (pavilion)",
+            "observation": "The architectural pavilion with intricate details and gold leaf, typical of Mughal art.",
+            "supports": "Mughal School"
+          },
+          {
+            "region": "upper_sky",
+            "observation": "Monsoon clouds in the upper sky are a common feature in Mughal paintings depicting outdoor scenes.",
+            "supports": "Mughal Period (16th-17th Century)"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.41) vs VLM='Non-Ragamala' (conf=0.95); School conflict: Classifier top-1='Rajasthani' (p=0.54) vs VLM='Mughal' (conf=0.85)",
+          "route_to_expert_review": true,
+          "review_reason": "Raga conflict: Classifier top-1='Ragamala (Unspecified)' (p=0.41) vs VLM='Non-Ragamala' (conf=0.95); School conflict: Classifier top-1='Rajasthani' (p=0.54) vs VLM='Mughal' (conf=0.85)"
+        },
+        "synthesis_rationale": "The painting exhibits characteristics of the Mughal school, such as refined color palette and architectural representation. The presence of monsoon clouds in Crop 7 supports a period within the classical Mughal era (16th-17th Century). However, the classifier's prediction for 'Rajasthani' suggests further review is necessary to confirm these attributions."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Ragamala (Unspecified)",
+            0.41226011514663696
+          ],
+          [
+            "Non-Ragamala",
+            0.40268197655677795
+          ],
+          [
+            "Ragamala (Other)",
+            0.1000625342130661
+          ]
+        ],
+        "school": [
+          [
+            "Rajasthani",
+            0.5411518216133118
+          ],
+          [
+            "Mughal",
+            0.45884814858436584
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.43145230412483215
+          ],
+          [
+            "Shah Jahan Period (c. 1628-1658)",
+            0.2119421660900116
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.1849748194217682
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            5.557344502090442e-26
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "oval_portrait_of_a_woman_in_a_chaghtai_hat_c_174050",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Late Mughal / 18th Century",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting is a portrait of an individual holding a water vessel, which does not depict any musical modes or ragas."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Three-quarter profile with naturalistic features and subtle tonal modeling.",
+            "Rich, sophisticated color palette including Lapis lazuli blues."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.75,
+          "evidence": [
+            "Subdued and naturalistic style with a focus on individualized features.",
+            "Rich color palette consistent with the late Mughal period."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.9,
+          "evidence": [
+            "No inscribed attribution or signature is visible."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (carpet)",
+            "observation": "The carpet in the background has a rich, sophisticated color palette with Lapis lazuli blues.",
+            "supports": "Mughal style"
+          },
+          {
+            "region": "upper_sky",
+            "observation": "Monsoon clouds are depicted in the upper sky area, which is characteristic of Mughal portraiture from this period.",
+            "supports": "Late Mughal / 18th Century context"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The portrait exhibits characteristics of late Mughal art, such as naturalistic features and sophisticated color palettes. The presence of monsoon clouds in the upper sky area further supports this period attribution. However, there is no inscription or signature to confirm the artist's identity. The classifiers' prediction for 'Non-Ragamala' aligns with visual evidence."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.8800973296165466
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.06596916168928146
+          ],
+          [
+            "Ragamala (Other)",
+            0.03498878329992294
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.8341642618179321
+          ],
+          [
+            "Rajasthani",
+            0.16583570837974548
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.4138120710849762
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.22075991332530975
+          ],
+          [
+            "Shah Jahan Period (c. 1628-1658)",
+            0.15997003018856049
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            3.9612251166306556e-36
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "mughal_style_detailed_male_hand_holding_a_sheath",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The image does not depict a Ragamala composition or any musical-mode personification."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The hand and garment style suggest Mughal influence, with fine detailing in the fabric."
+          ]
+        },
+        "predicted_period": {
+          "value": "Classical Mughal (16th-17th Century)",
+          "confidence": 0.8,
+          "evidence": [
+            "The muted color palette and style of representation are consistent with this period, which is known for its refined portraiture."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.75,
+          "evidence": [
+            "No inscribed attribution or signature visible."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (pavilion)",
+            "observation": "The architectural style of the pavilion is consistent with Mughal architecture.",
+            "supports": "Mughal School"
+          },
+          {
+            "region": "crop_2 (peacock)",
+            "observation": "No distinct peacock motifs or associated iconography visible in this cropped section, which could be related to Rajasthani art styles.",
+            "supports": "Rajasthani School"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting exhibits Mughal stylistic elements such as fine hand detail and muted color palette. However, the lack of clear iconographic motifs or inscriptions makes it challenging to definitively attribute this piece to a specific period or artist within the Mughal school. The image does not depict any Ragamala compositions."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.997159481048584
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.0013346566120162606
+          ],
+          [
+            "Ragamala (Other)",
+            0.0008883339469321072
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9828467965126038
+          ],
+          [
+            "Rajasthani",
+            0.017153283581137657
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.6385233402252197
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.1566237509250641
+          ],
+          [
+            "Shah Jahan Period (c. 1628-1658)",
+            0.0898011326789856
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.2249814863496113e-39
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "circumcision_ceremony_for_akbars_sons_painting_126_from_an_akbar-nama_book_of_akbar_of_abul_fazl_indian_15511602_c_16023",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Akbar Period (c. 1556-1605)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The scene depicts a courtly gathering with musicians playing instruments such as drums, flutes, and possibly a sitar-like instrument"
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Three-quarter profile of the seated figure in traditional Mughal attire with intricate embroidery.",
+            "The architectural elements, such as chhatris and detailed pavilions, are characteristic of Mughal art."
+          ]
+        },
+        "predicted_period": {
+          "value": "Akbar Period (c. 1556-1605)",
+          "confidence": 0.7,
+          "evidence": [
+            "The architectural style and the presence of chhatris are indicative of Akbar's reign."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.8,
+          "evidence": [
+            "No inscribed attribution or signature is visible in this image."
+          ]
+        },
+        "authenticity_score": 95,
+        "region_evidence": [
+          {
+            "region": "crop_1 (building)",
+            "observation": "The architectural elements, such as chhatris and detailed pavilions.",
+            "supports": "Mughal style"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting depicts a courtly scene with musicians and dancers, characteristic of Mughal art. The architectural elements such as chhatris are indicative of the Akbar Period (c. 1556-1605). While no inscribed attribution is visible, the style aligns closely with known Mughal artists from this period."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9973567724227905
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.0014402603264898062
+          ],
+          [
+            "Ragamala (Other)",
+            0.0007069414714351296
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9862517714500427
+          ],
+          [
+            "Rajasthani",
+            0.013748230412602425
+          ]
+        ],
+        "period": [
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.8332810401916504
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.08534996211528778
+          ],
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.02991291508078575
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.0319323542309383e-30
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "mughal_style_detailed_face_of_a_old_men_with_calm_expression",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting does not depict a Ragamala composition or musical-mode personification."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Three-quarter profile of the figure, naturalistic eyelids and jawlines.",
+            "Subdued color palette with earth tones."
+          ]
+        },
+        "predicted_period": {
+          "value": "Classical Mughal (16th-17th Century)",
+          "confidence": 0.85,
+          "evidence": [
+            "The style of the painting is consistent with the Classical Mughal period, characterized by its refined and naturalistic approach."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.95,
+          "evidence": [
+            "No inscribed attribution or signature present."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_4 (turban)",
+            "observation": "The turban is intricately detailed with fine lines and shading, typical of Mughal portraiture.",
+            "supports": "Mughal style"
+          },
+          {
+            "region": "upper_sky",
+            "observation": "Monsoon clouds are depicted in the background, which was a common motif during this period to signify the season's change.",
+            "supports": "Classical Mughal (16th-17th Century)"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting exhibits characteristics of the Mughal school, such as a three-quarter profile and naturalistic features. The subdued color palette and intricate detailing in the turban are indicative of the Classical Mughal period (16th-17th Century). However, no inscribed attribution or signature is present to definitively identify an artist."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9969057440757751
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.001548068132251501
+          ],
+          [
+            "Ragamala (Other)",
+            0.0009341722470708191
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9812031388282776
+          ],
+          [
+            "Rajasthani",
+            0.01879686675965786
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.5620144009590149
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.18604832887649536
+          ],
+          [
+            "Shah Jahan Period (c. 1628-1658)",
+            0.11566843837499619
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            3.737263004354287e-42
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Shah Jahan Period (c. 1628-1658)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The scene depicts a narrative of people bathing in water with no direct reference to musical modes or ragas."
+          ]
+        },
+        "predicted_school": {
+          "value": "Rajasthani",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The use of rich, vibrant colors and detailed brushwork is characteristic of Rajasthani art.",
+            "The architectural style in the background with its distinct roof structure aligns with Mewar or Bundi styles."
+          ]
+        },
+        "predicted_period": {
+          "value": "Late Mughal / 18th Century",
+          "confidence": 0.75,
+          "evidence": [
+            "The style of the painting, including its color palette and brushwork, is consistent with late Mughal or early Rajasthani art."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.8,
+          "evidence": [
+            "No inscribed attribution visible in the image."
+          ]
+        },
+        "authenticity_score": 95,
+        "region_evidence": [
+          {
+            "region": "crop_1 (turban)",
+            "observation": "A person wearing a turban, which is common attire for Rajasthani figures.",
+            "supports": "Rajasthani school"
+          },
+          {
+            "region": "upper_sky_monsoon_clouds",
+            "observation": "The depiction of monsoon clouds suggests the painting was created during or after the rainy season in Rajasthan.",
+            "supports": "Late Mughal / 18th Century period, when such motifs were popular."
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": false,
+          "conflict_summary": "School conflict: Classifier top-1='Mughal' (p=0.91) vs VLM='Rajasthani' (conf=0.85)",
+          "route_to_expert_review": true,
+          "review_reason": "School conflict: Classifier top-1='Mughal' (p=0.91) vs VLM='Rajasthani' (conf=0.85)"
+        },
+        "synthesis_rationale": "The painting depicts a narrative of people bathing in water without direct reference to musical modes or ragas. The rich color palette, detailed brushwork, architectural style with distinct roof structure, and use of vibrant colors are characteristic of the Rajasthani school during the late Mughal period (18th Century). However, there is no inscribed attribution for a specific artist."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9645240902900696
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.015309826470911503
+          ],
+          [
+            "Ragamala (Other)",
+            0.012973286211490631
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9144138097763062
+          ],
+          [
+            "Rajasthani",
+            0.08558624237775803
+          ]
+        ],
+        "period": [
+          [
+            "Late Mughal / 18th Century",
+            0.34501370787620544
+          ],
+          [
+            "Shah Jahan Period (c. 1628-1658)",
+            0.2431252896785736
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.20750494301319122
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            6.444603203637408e-30
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "2019_NYR_17464_0077_000_portrait_of_shah_jahan_mughal_india_circa_1700120632_",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Shah Jahan Period (c. 1628-1658)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting is a court portrait of an individual in traditional attire with no musical or symbolic motifs associated with Ragamala"
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "The use of fine stippling technique (pardaz), intricate floral borders, and the depiction style are characteristic of Mughal art."
+          ]
+        },
+        "predicted_period": {
+          "value": "Aurangzeb Period (c. 1658-1707)",
+          "confidence": 0.9,
+          "evidence": [
+            "The attire and the style suggest a later phase of Mughal art, closer to Aurangzeb's reign."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Ustad Mansur",
+          "confidence": 0.75,
+          "evidence": [
+            "The fine stippling technique (pardaz) and the style are consistent with Ustad Mansur, a renowned Mughal painter."
+          ]
+        },
+        "authenticity_score": 92,
+        "region_evidence": [
+          {
+            "region": "crop_1 (building)",
+            "observation": "The architectural elements in the background suggest an imperial setting typical of Mughal art.",
+            "supports": "Mughal School"
+          },
+          {
+            "region": "crop_2 (turban)",
+            "observation": "The intricate details and fine stippling technique are characteristic of Ustad Mansur's style.",
+            "supports": "Ustad Mansur as the artist"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting is identified as an imperial court portrait from the Aurangzeb period, attributed to Ustad Mansur. The fine stippling technique (pardaz) and intricate floral borders are characteristic of this school during that era. The architectural elements in the background further support its Mughal origin."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9728872179985046
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.014465552754700184
+          ],
+          [
+            "Ragamala (Other)",
+            0.00842192117124796
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9244495630264282
+          ],
+          [
+            "Rajasthani",
+            0.07555045187473297
+          ]
+        ],
+        "period": [
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.28472810983657837
+          ],
+          [
+            "Late Mughal / 18th Century",
+            0.2660079300403595
+          ],
+          [
+            "Shah Jahan Period (c. 1628-1658)",
+            0.2576981484889984
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.7157025335245951e-28
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "2019_NYR_17464_0325_000_inayat_khan_holding_a_portrait_of_a_european_soldier_mughal_india_circ032259_",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting does not depict a Ragamala composition or musical personification, and there is no inscription naming the raga."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Three-quarter profile of the figure with naturalistic features.",
+            "Subdued color palette typical for Mughal portraits."
+          ]
+        },
+        "predicted_period": {
+          "value": "Jahangir Period (c. 1605-1627)",
+          "confidence": 0.8,
+          "evidence": [
+            "The figure's attire and style are consistent with the Jahangir period, which is known for its refined portraiture."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.75,
+          "evidence": [
+            "No inscribed attribution or stylistic signature visible."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (turban)",
+            "observation": "The turban is depicted with fine detailing, typical of Mughal portraiture.",
+            "supports": "Mughal style"
+          },
+          {
+            "region": "crop_5 (person)",
+            "observation": "The figure's attire and pose are characteristic of court portraits from the Jahangir period.",
+            "supports": "Jahangir Period attribution"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The painting exhibits characteristics typical of the Mughal style during the Jahangir Period. The figure's attire, pose, and fine detailing in the turban are indicative of this era. There is no evidence to suggest it represents a Ragamala composition or musical personification."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.99604731798172
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.002348263980820775
+          ],
+          [
+            "Ragamala (Other)",
+            0.0010219160467386246
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9774377346038818
+          ],
+          [
+            "Rajasthani",
+            0.022562317550182343
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.33337435126304626
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.2314317673444748
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.2171367108821869
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            2.292948488706521e-36
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "mughal_style_detailed_male_hand_with_traditional_clothing_resting_on_floor",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The image does not depict a Ragamala composition or musical-mode personification."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Fine stippling technique (pardaz) creating delicate tonal modeling and volume.",
+            "Intricate decorative floral borders with real gold leaf illumination."
+          ]
+        },
+        "predicted_period": {
+          "value": "Classical Mughal (16th-17th Century)",
+          "confidence": 0.85,
+          "evidence": [
+            "Subdued, sophisticated color palette.",
+            "Accurate architectural representation of red sandstone and marble."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Unknown",
+          "confidence": 0.9,
+          "evidence": [
+            "No inscribed attribution or stylistic signature visible."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (turban)",
+            "observation": "The turban is intricately decorated with floral motifs and gold leaf, typical of Mughal style.",
+            "supports": "Mughal School stylistic characteristics"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The image depicts an individual in traditional attire with intricate floral decorations, characteristic of Mughal art. The fine stippling technique (pardaz) and use of gold leaf are indicative of this school's style during the Classical Mughal period. However, no inscribed attribution or specific artist signature is visible to confirm authorship."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.995634138584137
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.001973644830286503
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.0012445171596482396
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9824513792991638
+          ],
+          [
+            "Rajasthani",
+            0.01754867285490036
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.7437048554420471
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.15485216677188873
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.0340777151286602
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.0459431867566867e-40
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "mughal_style_face_of_a_men",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Classical Mughal (16th-17th Century)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The image is a portrait of an individual in Mughal attire with no visible musical or symbolic motifs associated with Ragamala paintings."
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Three-quarter profile, naturalistic facial features, and subdued color palette are characteristic of Mughal portraiture."
+          ]
+        },
+        "predicted_period": {
+          "value": "Jahangir Period (c. 1605-1627)",
+          "confidence": 0.8,
+          "evidence": [
+            "The attire, facial features, and style are consistent with the Jahangir period."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Ustad Mansur",
+          "confidence": 0.95,
+          "evidence": [
+            "The refined brushwork and attention to detail suggest Ustad Mansur's style."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_1 (peacock)",
+            "observation": "No peacock motif present in the image.",
+            "supports": ""
+          },
+          {
+            "region": "crop_2 (carpet)",
+            "observation": "No carpet motifs visible, only a portion of what appears to be an architectural structure or background element is shown.",
+            "supports": ""
+          },
+          {
+            "region": "crop_3 (turban)",
+            "observation": "The turban with jewels and intricate details aligns with Mughal portraiture style from the Jahangir period, but no direct iconographic evidence of a Raga or musical motif is present.",
+            "supports": ""
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The image is a Mughal portrait from the Jahangir period, characterized by its refined brushwork, naturalistic facial features, and subdued color palette. The style suggests it could be attributed to Ustad Mansur. There are no visible motifs or inscriptions that would indicate this painting as part of a Ragamala series."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.9961691498756409
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.0017145455349236727
+          ],
+          [
+            "Shri Raga/Ragini",
+            0.001151595963165164
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9790578484535217
+          ],
+          [
+            "Rajasthani",
+            0.0209420844912529
+          ]
+        ],
+        "period": [
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.9006724953651428
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.044276509433984756
+          ],
+          [
+            "Aurangzeb Period (c. 1658-1707)",
+            0.02561073563992977
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            1.0074046763908256e-39
+          ]
+        ]
+      }
+    },
+    {
+      "image_id": "the_raja_of_ujjain_who_is_traveling_in_the_guise_of_a_yogi_meets_two_brothers_who_ask_him_to_equitably_partition_their_f_c_1560",
+      "ground_truth": {
+        "raga": "Non-Ragamala",
+        "school": "Mughal",
+        "period": "Akbar Period (c. 1556-1605)",
+        "artist": "Unknown"
+      },
+      "vlm_judgment": {
+        "predicted_raga": {
+          "value": "Non-Ragamala",
+          "confidence": 0.95,
+          "iconographic_evidence": [
+            "The painting depicts a narrative scene with figures in conversation rather than personifying musical modes or ragas"
+          ]
+        },
+        "predicted_school": {
+          "value": "Mughal",
+          "confidence": 0.85,
+          "stylistic_evidence": [
+            "Three-quarter profile of the seated figure, fine stippling technique (pardaz), and naturalistic facial features are characteristic Mughal styles."
+          ]
+        },
+        "predicted_period": {
+          "value": "Jahangir Period (c. 1605-1627)",
+          "confidence": 0.8,
+          "evidence": [
+            "The architectural style of the pavilion and the refined color palette suggest a period later than Akbar's reign but earlier in Shah Jahan\u2019s."
+          ]
+        },
+        "predicted_artist": {
+          "value": "Ustad Mansur",
+          "confidence": 0.7,
+          "evidence": [
+            "The fine stippling technique (pardaz) and the naturalistic facial features are consistent with Ustad Mansur's style, though inscriptions would confirm this."
+          ]
+        },
+        "authenticity_score": 85,
+        "region_evidence": [
+          {
+            "region": "crop_4 (tree)",
+            "observation": "The tree is depicted in a naturalistic manner typical of Mughal art.",
+            "supports": "Mughal stylistic evidence"
+          },
+          {
+            "region": "crop_6 (man)",
+            "observation": "The seated figure has three-quarter profile and fine stippling technique, characteristic of Ustad Mansur's style.",
+            "supports": "Ustad Mansur's artistic signature"
+          }
+        ],
+        "cross_check": {
+          "agrees_with_classifiers": true,
+          "conflict_summary": "Classifiers and VLM agree on primary targets.",
+          "route_to_expert_review": false,
+          "review_reason": "Confirmed high confidence agreement."
+        },
+        "synthesis_rationale": "The scene depicted in the image is narrative, likely from courtly life rather than representing musical modes. The three-quarter profile of figures, fine stippling technique (pardaz), naturalistic facial features, and architectural style are all characteristic of Mughal art during the Jahangir period. Ustad Mansur's style aligns with these observations."
+      },
+      "classifier_top3": {
+        "raga": [
+          [
+            "Non-Ragamala",
+            0.997395396232605
+          ],
+          [
+            "Ragamala (Unspecified)",
+            0.0011604315368458629
+          ],
+          [
+            "Ragamala (Other)",
+            0.0008678145240992308
+          ]
+        ],
+        "school": [
+          [
+            "Mughal",
+            0.9877391457557678
+          ],
+          [
+            "Rajasthani",
+            0.01226083654910326
+          ]
+        ],
+        "period": [
+          [
+            "Akbar Period (c. 1556-1605)",
+            0.9595019817352295
+          ],
+          [
+            "Jahangir Period (c. 1605-1627)",
+            0.015603065490722656
+          ],
+          [
+            "Classical Mughal (16th-17th Century)",
+            0.008191170170903206
+          ]
+        ],
+        "artist": [
+          [
+            "Unknown",
+            1.0
+          ],
+          [
+            "Ustad Mansur",
+            2.2556481752060194e-32
+          ]
+        ]
+      }
+    }
+  ]
+}

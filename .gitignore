@@ -1,0 +1,6 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# CLIP text-encoder weights (338 MB, over GitHub's 100 MB limit); ultralytics re-downloads them automatically
+weights/clip/

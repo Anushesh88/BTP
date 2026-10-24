@@ -1,0 +1,12 @@
+2026-10-21 13:05:18,559 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 13:05:18,562 [INFO] Baseline classifier loaded from models\baseline_classifiers.joblib
+2026-10-21 13:05:18,562 [INFO] Loading cached embeddings from: data\cache\embeddings_test_vit_b_16.npz
+2026-10-21 13:05:18,568 [INFO] Loaded 84 cached embeddings of shape (84, 768).
+2026-10-21 13:05:18,859 [INFO] Multi-Head checkpoint successfully loaded from: models\multihead_fused_classifier.pt
+2026-10-21 13:05:18,859 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 13:05:20,229 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 13:05:20,773 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-21 13:05:20,820 [INFO] Loading cached fused features from: data\cache\fused_test_vit_b_16.npz
+2026-10-21 13:05:21,372 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 13:05:22,366 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 13:05:29,029 [INFO] Phase 10 report: reports\final_evaluation_report.md

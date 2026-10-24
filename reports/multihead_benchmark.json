@@ -1,0 +1,211 @@
+{
+  "raga": {
+    "accuracy": 0.9047619047619048,
+    "macro_f1": 0.4630325814536341,
+    "weighted_f1": 0.9237602935911207,
+    "expected_calibration_error": 0.06274939009121486,
+    "classes": [
+      "Non-Ragamala",
+      "Ragamala (Other)",
+      "Ragamala (Unspecified)",
+      "Shri Raga/Ragini"
+    ],
+    "classification_report": {
+      "Non-Ragamala": {
+        "precision": 1.0,
+        "recall": 0.9240506329113924,
+        "f1-score": 0.9605263157894737,
+        "support": 79.0
+      },
+      "Ragamala (Unspecified)": {
+        "precision": 0.3,
+        "recall": 0.75,
+        "f1-score": 0.42857142857142855,
+        "support": 4.0
+      },
+      "Shri Raga/Ragini": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.9047619047619048,
+      "macro avg": {
+        "precision": 0.43333333333333335,
+        "recall": 0.5580168776371308,
+        "f1-score": 0.4630325814536341,
+        "support": 84.0
+      },
+      "weighted avg": {
+        "precision": 0.9547619047619048,
+        "recall": 0.9047619047619048,
+        "f1-score": 0.9237602935911207,
+        "support": 84.0
+      }
+    },
+    "confusion_matrix_plot": "reports\\multihead_confusion_matrix_raga.png"
+  },
+  "school": {
+    "accuracy": 0.9047619047619048,
+    "macro_f1": 0.4845474613686534,
+    "weighted_f1": 0.9206874802901294,
+    "expected_calibration_error": 0.058921803192920036,
+    "classes": [
+      "Mughal",
+      "Pahari",
+      "Rajasthani"
+    ],
+    "classification_report": {
+      "Mughal": {
+        "precision": 1.0,
+        "recall": 0.9113924050632911,
+        "f1-score": 0.9536423841059603,
+        "support": 79.0
+      },
+      "Pahari": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Rajasthani": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1-score": 0.5,
+        "support": 4.0
+      },
+      "accuracy": 0.9047619047619048,
+      "macro avg": {
+        "precision": 0.4444444444444444,
+        "recall": 0.6371308016877637,
+        "f1-score": 0.4845474613686534,
+        "support": 84.0
+      },
+      "weighted avg": {
+        "precision": 0.9563492063492063,
+        "recall": 0.9047619047619048,
+        "f1-score": 0.9206874802901294,
+        "support": 84.0
+      }
+    },
+    "confusion_matrix_plot": "reports\\multihead_confusion_matrix_school.png"
+  },
+  "period": {
+    "accuracy": 0.6610169491525424,
+    "macro_f1": 0.46249365047814656,
+    "weighted_f1": 0.6437892973170861,
+    "expected_calibration_error": 0.10880575594255479,
+    "classes": [
+      "Akbar Period (c. 1556-1605)",
+      "Aurangzeb Period (c. 1658-1707)",
+      "Classical Mughal (16th-17th Century)",
+      "Jahangir Period (c. 1605-1627)",
+      "Late Mughal / 18th Century",
+      "Shah Jahan Period (c. 1628-1658)"
+    ],
+    "classification_report": {
+      "Akbar Period (c. 1556-1605)": {
+        "precision": 1.0,
+        "recall": 0.6875,
+        "f1-score": 0.8148148148148148,
+        "support": 16.0
+      },
+      "Aurangzeb Period (c. 1658-1707)": {
+        "precision": 0.2222222222222222,
+        "recall": 0.5,
+        "f1-score": 0.3076923076923077,
+        "support": 4.0
+      },
+      "Classical Mughal (16th-17th Century)": {
+        "precision": 0.8695652173913043,
+        "recall": 1.0,
+        "f1-score": 0.9302325581395349,
+        "support": 20.0
+      },
+      "Jahangir Period (c. 1605-1627)": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1-score": 0.2222222222222222,
+        "support": 5.0
+      },
+      "Late Mughal / 18th Century": {
+        "precision": 0.4166666666666667,
+        "recall": 0.625,
+        "f1-score": 0.5,
+        "support": 8.0
+      },
+      "Shah Jahan Period (c. 1628-1658)": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "accuracy": 0.6610169491525424,
+      "macro avg": {
+        "precision": 0.45974235104669886,
+        "recall": 0.5020833333333333,
+        "f1-score": 0.46249365047814656,
+        "support": 59.0
+      },
+      "weighted avg": {
+        "precision": 0.6587038401703104,
+        "recall": 0.6610169491525424,
+        "f1-score": 0.6437892973170861,
+        "support": 59.0
+      }
+    },
+    "confusion_matrix_plot": "reports\\multihead_confusion_matrix_period.png"
+  },
+  "artist": {
+    "accuracy": 0.9642857142857143,
+    "macro_f1": 0.24545454545454545,
+    "weighted_f1": 0.9467532467532468,
+    "expected_calibration_error": 0.035480296466408705,
+    "classes": [
+      "Bishandas",
+      "Dhanu",
+      "Unknown",
+      "Ustad Mansur"
+    ],
+    "classification_report": {
+      "Bishandas": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Dhanu": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Unknown": {
+        "precision": 0.9642857142857143,
+        "recall": 1.0,
+        "f1-score": 0.9818181818181818,
+        "support": 81.0
+      },
+      "Ustad Mansur": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.9642857142857143,
+      "macro avg": {
+        "precision": 0.24107142857142858,
+        "recall": 0.25,
+        "f1-score": 0.24545454545454545,
+        "support": 84.0
+      },
+      "weighted avg": {
+        "precision": 0.9298469387755103,
+        "recall": 0.9642857142857143,
+        "f1-score": 0.9467532467532468,
+        "support": 84.0
+      }
+    },
+    "confusion_matrix_plot": "reports\\multihead_confusion_matrix_artist.png"
+  }
+}

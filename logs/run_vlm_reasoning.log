@@ -1,0 +1,234 @@
+2026-10-21 12:18:43,340 [INFO] === STEP 1: Loading Held-Out Test Split ===
+2026-10-21 12:18:43,456 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 12:18:43,456 [INFO] Evaluating 84 held-out paintings.
+2026-10-21 12:18:43,456 [INFO] === STEP 2: Computing Classifier Top-3 Candidates ===
+2026-10-21 12:18:43,600 [INFO] Multi-Head checkpoint successfully loaded from: models\multihead_fused_classifier.pt
+2026-10-21 12:18:43,600 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 12:18:44,657 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 12:18:44,973 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-21 12:18:44,984 [WARNING] Fused cache data\cache\fused_test_vit_b_16.npz does not match the requested paintings. Recomputing...
+2026-10-21 12:18:45,603 [INFO] Extracting dual-branch fused features on 84 paintings...
+2026-10-21 12:18:47,800 [INFO] Extracted [5/84] paintings (fused dim: 1632).
+2026-10-21 12:18:49,501 [INFO] Extracted [10/84] paintings (fused dim: 1632).
+2026-10-21 12:18:51,426 [INFO] Extracted [15/84] paintings (fused dim: 1632).
+2026-10-21 12:18:53,282 [INFO] Extracted [20/84] paintings (fused dim: 1632).
+2026-10-21 12:18:55,102 [INFO] Extracted [25/84] paintings (fused dim: 1632).
+2026-10-21 12:18:57,131 [INFO] Extracted [30/84] paintings (fused dim: 1632).
+2026-10-21 12:18:59,010 [INFO] Extracted [35/84] paintings (fused dim: 1632).
+2026-10-21 12:19:01,613 [INFO] Extracted [40/84] paintings (fused dim: 1632).
+2026-10-21 12:19:02,798 [INFO] Extracted [45/84] paintings (fused dim: 1632).
+2026-10-21 12:19:04,147 [INFO] Extracted [50/84] paintings (fused dim: 1632).
+2026-10-21 12:19:06,044 [INFO] Extracted [55/84] paintings (fused dim: 1632).
+2026-10-21 12:19:07,926 [INFO] Extracted [60/84] paintings (fused dim: 1632).
+2026-10-21 12:19:10,049 [INFO] Extracted [65/84] paintings (fused dim: 1632).
+2026-10-21 12:19:13,172 [INFO] Extracted [70/84] paintings (fused dim: 1632).
+2026-10-21 12:19:14,745 [INFO] Extracted [75/84] paintings (fused dim: 1632).
+2026-10-21 12:19:16,728 [INFO] Extracted [80/84] paintings (fused dim: 1632).
+2026-10-21 12:19:17,889 [INFO] Extracted [84/84] paintings (fused dim: 1632).
+2026-10-21 12:19:17,929 [INFO] Saved fused feature matrix of shape (84, 1632) to data\cache\fused_test_vit_b_16.npz
+2026-10-21 12:19:18,003 [INFO] Classifier candidates from: Phase 7 multi-head fused classifier (temperature-calibrated)
+2026-10-21 12:19:18,117 [INFO] === STEP 3: Initializing VLM Client (qwen_ollama: qwen2.5vl:3b) ===
+2026-10-21 12:19:18,117 [INFO] Initialized Qwen VLM Client with model 'qwen2.5vl:3b' at http://127.0.0.1:11434
+2026-10-21 12:19:18,119 [INFO] Knowledge Base loaded: 9 ragas, 7 schools, 5 periods.
+2026-10-21 12:19:18,121 [INFO] === STEP 4: Executing Multimodal VLM Reasoning & Cross-Check ===
+2026-10-21 12:19:18,125 [INFO] Analyzing [1/84] royal_court_scene_multiple_figures_seated_and_kneeling_ruler_presenting_document_mughal_miniature (GT school=Mughal, period=None)
+2026-10-21 12:20:07,043 [INFO] Enqueued painting royal_court_scene_multiple_figures_seated_and_kneeling_ruler_presenting_document_mughal_miniature to expert review: reports\expert_review\review_card_royal_court_scene_multiple_figures_seated_and_kneeling_ruler_presenting_document_mughal_miniature.md
+2026-10-21 12:20:07,043 [INFO] Analyzing [2/84] mughal_style_complete_detailed_male_hands_with_white_clothing_pointing_an_object (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:20:48,143 [INFO] Enqueued painting mughal_style_complete_detailed_male_hands_with_white_clothing_pointing_an_object to expert review: reports\expert_review\review_card_mughal_style_complete_detailed_male_hands_with_white_clothing_pointing_an_object.md
+2026-10-21 12:20:48,144 [INFO] Analyzing [3/84] hunting_with_falcons_in_a_landscape_recto_c_155860_borders_added_probably_1700s (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 12:21:24,694 [INFO] Enqueued painting hunting_with_falcons_in_a_landscape_recto_c_155860_borders_added_probably_1700s to expert review: reports\expert_review\review_card_hunting_with_falcons_in_a_landscape_recto_c_155860_borders_added_probably_1700s.md
+2026-10-21 12:21:24,695 [INFO] Analyzing [4/84] image-from-rawpixel-id-8846601-original (GT school=Mughal, period=None)
+2026-10-21 12:22:12,542 [INFO] Enqueued painting image-from-rawpixel-id-8846601-original to expert review: reports\expert_review\review_card_image-from-rawpixel-id-8846601-original.md
+2026-10-21 12:22:12,543 [INFO] Analyzing [5/84] ma-55333 (GT school=Rajasthani, period=None)
+2026-10-21 12:22:55,317 [INFO] Analyzing [6/84] FS-6578_06 (GT school=Mughal, period=None)
+2026-10-21 12:23:43,549 [INFO] Enqueued painting FS-6578_06 to expert review: reports\expert_review\review_card_FS-6578_06.md
+2026-10-21 12:23:43,550 [INFO] Analyzing [7/84] oval_portrait_of_a_woman_in_a_chaghtai_hat_c_174050 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 12:24:22,764 [INFO] Enqueued painting oval_portrait_of_a_woman_in_a_chaghtai_hat_c_174050 to expert review: reports\expert_review\review_card_oval_portrait_of_a_woman_in_a_chaghtai_hat_c_174050.md
+2026-10-21 12:24:22,765 [INFO] Analyzing [8/84] FS-8091_09 (GT school=Rajasthani, period=None)
+2026-10-21 12:25:11,844 [INFO] Enqueued painting FS-8091_09 to expert review: reports\expert_review\review_card_FS-8091_09.md
+2026-10-21 12:25:11,845 [INFO] Analyzing [9/84] yusuf_and_zulaykha_meeting_c_1764 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 12:25:58,722 [INFO] Enqueued painting yusuf_and_zulaykha_meeting_c_1764 to expert review: reports\expert_review\review_card_yusuf_and_zulaykha_meeting_c_1764.md
+2026-10-21 12:25:58,723 [INFO] Analyzing [10/84] posthumous_portrait_of_the_mughal_emperor_muhammad_shah_reigned_17191748_holding_a_falcon_recto_1764 (GT school=Mughal, period=None)
+2026-10-21 12:26:45,358 [INFO] Enqueued painting posthumous_portrait_of_the_mughal_emperor_muhammad_shah_reigned_17191748_holding_a_falcon_recto_1764 to expert review: reports\expert_review\review_card_posthumous_portrait_of_the_mughal_emperor_muhammad_shah_reigned_17191748_holding_a_falcon_recto_1764.md
+2026-10-21 12:26:45,359 [INFO] Analyzing [11/84] FS-6917_01 (GT school=Mughal, period=None)
+2026-10-21 12:27:39,405 [INFO] Enqueued painting FS-6917_01 to expert review: reports\expert_review\review_card_FS-6917_01.md
+2026-10-21 12:27:39,406 [INFO] Analyzing [12/84] 2019_NYR_17464_0077_000_portrait_of_shah_jahan_mughal_india_circa_1700120632_ (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 12:28:33,856 [INFO] Enqueued painting 2019_NYR_17464_0077_000_portrait_of_shah_jahan_mughal_india_circa_1700120632_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0077_000_portrait_of_shah_jahan_mughal_india_circa_1700120632_.md
+2026-10-21 12:28:33,857 [INFO] Analyzing [13/84] 2019_NYR_17464_0078_000_a_portrait_of_the_emperor_aurangzeb_mughal_india_circa_1700031228_ (GT school=Mughal, period=Aurangzeb Period (c. 1658-1707))
+2026-10-21 12:29:27,093 [INFO] Enqueued painting 2019_NYR_17464_0078_000_a_portrait_of_the_emperor_aurangzeb_mughal_india_circa_1700031228_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0078_000_a_portrait_of_the_emperor_aurangzeb_mughal_india_circa_1700031228_.md
+2026-10-21 12:29:27,094 [INFO] Analyzing [14/84] 2019_NYR_17464_0145_000_prince_salim_riding_an_escaped_elephant_mughal_india_probably_allahaba031446_ (GT school=Mughal, period=Jahangir Period (c. 1605-1627))
+2026-10-21 12:30:15,316 [INFO] Enqueued painting 2019_NYR_17464_0145_000_prince_salim_riding_an_escaped_elephant_mughal_india_probably_allahaba031446_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0145_000_prince_salim_riding_an_escaped_elephant_mughal_india_probably_allahaba031446_.md
+2026-10-21 12:30:15,317 [INFO] Analyzing [15/84] 2019_NYR_17464_0181_000_the_emperor_akbar_holding_a_jewel_mughal_india_18th_century050532_ (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 12:30:53,913 [INFO] Enqueued painting 2019_NYR_17464_0181_000_the_emperor_akbar_holding_a_jewel_mughal_india_18th_century050532_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0181_000_the_emperor_akbar_holding_a_jewel_mughal_india_18th_century050532_.md
+2026-10-21 12:30:53,914 [INFO] Analyzing [16/84] 2019_NYR_17464_0186_000_an_equestrian_portrait_of_aurangzeb_mughal_india_circa_1700015345_ (GT school=Mughal, period=Aurangzeb Period (c. 1658-1707))
+2026-10-21 12:31:37,285 [INFO] Enqueued painting 2019_NYR_17464_0186_000_an_equestrian_portrait_of_aurangzeb_mughal_india_circa_1700015345_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0186_000_an_equestrian_portrait_of_aurangzeb_mughal_india_circa_1700015345_.md
+2026-10-21 12:31:37,286 [INFO] Analyzing [17/84] 2019_NYR_17464_0187_001_the_emperor_aurangzeb_in_old_age_painting_mughal_india_circa_1700_call031835_ (GT school=Mughal, period=Aurangzeb Period (c. 1658-1707))
+2026-10-21 12:32:26,853 [INFO] Enqueued painting 2019_NYR_17464_0187_001_the_emperor_aurangzeb_in_old_age_painting_mughal_india_circa_1700_call031835_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0187_001_the_emperor_aurangzeb_in_old_age_painting_mughal_india_circa_1700_call031835_.md
+2026-10-21 12:32:26,854 [INFO] Analyzing [18/84] 2019_NYR_17464_0257_000_prince_muazzam_bahadur_shah_and_a_courtier_holding_a_falcon_mughal_ind032001_ (GT school=Mughal, period=None)
+2026-10-21 12:33:13,876 [INFO] Enqueued painting 2019_NYR_17464_0257_000_prince_muazzam_bahadur_shah_and_a_courtier_holding_a_falcon_mughal_ind032001_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0257_000_prince_muazzam_bahadur_shah_and_a_courtier_holding_a_falcon_mughal_ind032001_.md
+2026-10-21 12:33:13,877 [INFO] Analyzing [19/84] 2019_NYR_17464_0258_000_a_group_of_princes_out_hawking_murshidabad_provincial_mughal_north_ind022931_ (GT school=Mughal, period=None)
+2026-10-21 12:33:59,265 [INFO] Enqueued painting 2019_NYR_17464_0258_000_a_group_of_princes_out_hawking_murshidabad_provincial_mughal_north_ind022931_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0258_000_a_group_of_princes_out_hawking_murshidabad_provincial_mughal_north_ind022931_.md
+2026-10-21 12:33:59,265 [INFO] Analyzing [20/84] 2019_NYR_17464_0324_000_a_nobleman_possibly_asaf_khan_attributable_to_bishandas_or_nanha_mugha032237_ (GT school=Mughal, period=None)
+2026-10-21 12:34:39,693 [INFO] Enqueued painting 2019_NYR_17464_0324_000_a_nobleman_possibly_asaf_khan_attributable_to_bishandas_or_nanha_mugha032237_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0324_000_a_nobleman_possibly_asaf_khan_attributable_to_bishandas_or_nanha_mugha032237_.md
+2026-10-21 12:34:39,694 [INFO] Analyzing [21/84] 2019_NYR_17464_0325_000_inayat_khan_holding_a_portrait_of_a_european_soldier_mughal_india_circ032259_ (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:35:20,459 [INFO] Enqueued painting 2019_NYR_17464_0325_000_inayat_khan_holding_a_portrait_of_a_european_soldier_mughal_india_circ032259_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0325_000_inayat_khan_holding_a_portrait_of_a_european_soldier_mughal_india_circ032259_.md
+2026-10-21 12:35:20,460 [INFO] Analyzing [22/84] 2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_ (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 12:36:06,712 [INFO] Enqueued painting 2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_.md
+2026-10-21 12:36:06,713 [INFO] Analyzing [23/84] 2019_NYR_17464_0327_000_a_portrait_of_nawab_muhsin_khan_mughal_india_first_half_18th_century032343_ (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 12:36:55,209 [INFO] Enqueued painting 2019_NYR_17464_0327_000_a_portrait_of_nawab_muhsin_khan_mughal_india_first_half_18th_century032343_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0327_000_a_portrait_of_nawab_muhsin_khan_mughal_india_first_half_18th_century032343_.md
+2026-10-21 12:36:55,210 [INFO] Analyzing [24/84] 2019_NYR_17464_0328_001_a_portrait_of_khan_zaman_attributable_to_bichitr_mughal_india_circa_16110957_ (GT school=Mughal, period=Jahangir Period (c. 1605-1627))
+2026-10-21 12:37:44,078 [INFO] Enqueued painting 2019_NYR_17464_0328_001_a_portrait_of_khan_zaman_attributable_to_bichitr_mughal_india_circa_16110957_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0328_001_a_portrait_of_khan_zaman_attributable_to_bichitr_mughal_india_circa_16110957_.md
+2026-10-21 12:37:44,079 [INFO] Analyzing [25/84] 2019_NYR_17464_0336_000_a_prince_seated_with_ladies_in_a_landscape_mughal_india_mid-18th_centu032510_ (GT school=Mughal, period=None)
+2026-10-21 12:38:35,841 [INFO] Enqueued painting 2019_NYR_17464_0336_000_a_prince_seated_with_ladies_in_a_landscape_mughal_india_mid-18th_centu032510_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0336_000_a_prince_seated_with_ladies_in_a_landscape_mughal_india_mid-18th_centu032510_.md
+2026-10-21 12:38:35,841 [INFO] Analyzing [26/84] 2019_NYR_17464_0345_001_a_meeting_between_shah_jahan_and_khizir_mughal_india_circa_1640-1660032619_ (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 12:39:15,553 [INFO] Enqueued painting 2019_NYR_17464_0345_001_a_meeting_between_shah_jahan_and_khizir_mughal_india_circa_1640-1660032619_ to expert review: reports\expert_review\review_card_2019_NYR_17464_0345_001_a_meeting_between_shah_jahan_and_khizir_mughal_india_circa_1640-1660032619_.md
+2026-10-21 12:39:15,554 [INFO] Analyzing [27/84] FS-5814_11 (GT school=Mughal, period=None)
+2026-10-21 12:40:03,091 [INFO] Enqueued painting FS-5814_11 to expert review: reports\expert_review\review_card_FS-5814_11.md
+2026-10-21 12:40:03,091 [INFO] Analyzing [28/84] FS-5814_13 (GT school=Rajasthani, period=None)
+2026-10-21 12:40:46,412 [INFO] Enqueued painting FS-5814_13 to expert review: reports\expert_review\review_card_FS-5814_13.md
+2026-10-21 12:40:46,414 [INFO] Analyzing [29/84] a_prince_celebrating_holi_with_palace_women_on_a_terrace_at_night_recto_c_1760 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 12:41:20,298 [INFO] Enqueued painting a_prince_celebrating_holi_with_palace_women_on_a_terrace_at_night_recto_c_1760 to expert review: reports\expert_review\review_card_a_prince_celebrating_holi_with_palace_women_on_a_terrace_at_night_recto_c_1760.md
+2026-10-21 12:41:20,299 [INFO] Analyzing [30/84] ma-45020 (GT school=Rajasthani, period=None)
+2026-10-21 12:42:00,586 [INFO] Enqueued painting ma-45020 to expert review: reports\expert_review\review_card_ma-45020.md
+2026-10-21 12:42:00,589 [INFO] Analyzing [31/84] mughal_style_detailed_face_of_female (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:42:49,040 [INFO] Enqueued painting mughal_style_detailed_face_of_female to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_female.md
+2026-10-21 12:42:49,041 [INFO] Analyzing [32/84] the_prince_once_reprieved_is_returned_to_the_palace_of_execution_a_second_time_on_the_plea_of_the_kings_handmaiden_from__c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 12:43:36,136 [INFO] Enqueued painting the_prince_once_reprieved_is_returned_to_the_palace_of_execution_a_second_time_on_the_plea_of_the_kings_handmaiden_from__c_1560 to expert review: reports\expert_review\review_card_the_prince_once_reprieved_is_returned_to_the_palace_of_execution_a_second_time_on_the_plea_of_the_kings_handmaiden_from__c_1560.md
+2026-10-21 12:43:36,137 [INFO] Analyzing [33/84] portrait_of_a_prince_with_a_hawk_1700s (GT school=Mughal, period=Aurangzeb Period (c. 1658-1707))
+2026-10-21 12:44:22,501 [INFO] Enqueued painting portrait_of_a_prince_with_a_hawk_1700s to expert review: reports\expert_review\review_card_portrait_of_a_prince_with_a_hawk_1700s.md
+2026-10-21 12:44:22,503 [INFO] Analyzing [34/84] a_princess_on_a_terrace_with_attendants_at_night_recto_c_1760 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 12:45:08,812 [INFO] Enqueued painting a_princess_on_a_terrace_with_attendants_at_night_recto_c_1760 to expert review: reports\expert_review\review_card_a_princess_on_a_terrace_with_attendants_at_night_recto_c_1760.md
+2026-10-21 12:45:08,813 [INFO] Analyzing [35/84] a_courtier_possibly_khan_alam_holding_a_spinel_and_a_deccan_sword_c_16051610 (GT school=Mughal, period=Jahangir Period (c. 1605-1627))
+2026-10-21 12:45:57,449 [INFO] Enqueued painting a_courtier_possibly_khan_alam_holding_a_spinel_and_a_deccan_sword_c_16051610 to expert review: reports\expert_review\review_card_a_courtier_possibly_khan_alam_holding_a_spinel_and_a_deccan_sword_c_16051610.md
+2026-10-21 12:45:57,449 [INFO] Analyzing [36/84] mughal_style_detailed_face_of_royal_men (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:46:46,049 [INFO] Enqueued painting mughal_style_detailed_face_of_royal_men to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_royal_men.md
+2026-10-21 12:46:46,051 [INFO] Analyzing [37/84] leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650 (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 12:47:27,153 [INFO] Enqueued painting leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650 to expert review: reports\expert_review\review_card_leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650.md
+2026-10-21 12:47:27,154 [INFO] Analyzing [38/84] husain_ali_khan_entertaining_his_brothers_the_sayyid_brothers_c_171219 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 12:48:13,947 [INFO] Enqueued painting husain_ali_khan_entertaining_his_brothers_the_sayyid_brothers_c_171219 to expert review: reports\expert_review\review_card_husain_ali_khan_entertaining_his_brothers_the_sayyid_brothers_c_171219.md
+2026-10-21 12:48:13,948 [INFO] Analyzing [39/84] FS-8106_08 (GT school=Mughal, period=None)
+2026-10-21 12:48:56,571 [INFO] Enqueued painting FS-8106_08 to expert review: reports\expert_review\review_card_FS-8106_08.md
+2026-10-21 12:48:56,573 [INFO] Analyzing [40/84] FS-8106_16 (GT school=Mughal, period=None)
+2026-10-21 12:49:46,563 [INFO] Enqueued painting FS-8106_16 to expert review: reports\expert_review\review_card_FS-8106_16.md
+2026-10-21 12:49:46,563 [INFO] Analyzing [41/84] mughal_style_detailed_face_of_men_with_armors (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:50:40,151 [INFO] Enqueued painting mughal_style_detailed_face_of_men_with_armors to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_men_with_armors.md
+2026-10-21 12:50:40,152 [INFO] Analyzing [42/84] mughal_style_detailed_male_hands_with_traditional_clothing_playing_traditional_musical_instruments (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:51:29,458 [INFO] Enqueued painting mughal_style_detailed_male_hands_with_traditional_clothing_playing_traditional_musical_instruments to expert review: reports\expert_review\review_card_mughal_style_detailed_male_hands_with_traditional_clothing_playing_traditional_musical_instruments.md
+2026-10-21 12:51:29,459 [INFO] Analyzing [43/84] mughal_style_detailed_face_of_a_men_kept_hand_on_head (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:52:17,031 [INFO] Enqueued painting mughal_style_detailed_face_of_a_men_kept_hand_on_head to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_a_men_kept_hand_on_head.md
+2026-10-21 12:52:17,033 [INFO] Analyzing [44/84] the_brahmans_predicament_is_conveyed_by_the_wind_to_the_fish_who_carries_the_news_to_the_king_of_the_ocean_from_a_tuti-n_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 12:53:06,189 [INFO] Enqueued painting the_brahmans_predicament_is_conveyed_by_the_wind_to_the_fish_who_carries_the_news_to_the_king_of_the_ocean_from_a_tuti-n_c_1560 to expert review: reports\expert_review\review_card_the_brahmans_predicament_is_conveyed_by_the_wind_to_the_fish_who_carries_the_news_to_the_king_of_the_ocean_from_a_tuti-n_c_1560.md
+2026-10-21 12:53:06,190 [INFO] Analyzing [45/84] mughal_style_detailed_female_hands_with_traditional_mughal_clothing_clapping (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:53:36,592 [INFO] Enqueued painting mughal_style_detailed_female_hands_with_traditional_mughal_clothing_clapping to expert review: reports\expert_review\review_card_mughal_style_detailed_female_hands_with_traditional_mughal_clothing_clapping.md
+2026-10-21 12:53:36,593 [INFO] Analyzing [46/84] FS-7407_27 (GT school=Pahari, period=None)
+2026-10-21 12:54:36,919 [INFO] Enqueued painting FS-7407_27 to expert review: reports\expert_review\review_card_FS-7407_27.md
+2026-10-21 12:54:36,920 [INFO] Analyzing [47/84] mughalstyle_miniature_painting_detailed_male_hand_raised_gesture_ornate_sleeve_traditional_indian_art_flat_shading_fine_brush_detail (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:55:23,485 [INFO] Enqueued painting mughalstyle_miniature_painting_detailed_male_hand_raised_gesture_ornate_sleeve_traditional_indian_art_flat_shading_fine_brush_detail to expert review: reports\expert_review\review_card_mughalstyle_miniature_painting_detailed_male_hand_raised_gesture_ornate_sleeve_traditional_indian_art_flat_shading_fine_brush_detail.md
+2026-10-21 12:55:23,486 [INFO] Analyzing [48/84] mughal_style_detailed_male_hand_with_traditional_clothing_resting_on_floor (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:56:17,820 [INFO] Enqueued painting mughal_style_detailed_male_hand_with_traditional_clothing_resting_on_floor to expert review: reports\expert_review\review_card_mughal_style_detailed_male_hand_with_traditional_clothing_resting_on_floor.md
+2026-10-21 12:56:17,823 [INFO] Analyzing [49/84] the_soldier_receives_a_garland_of_roses_from_his_wife_which_will_remain_fresh_as_long_as_she_is_faithful_from_a_tuti-nam_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 12:57:07,099 [INFO] Enqueued painting the_soldier_receives_a_garland_of_roses_from_his_wife_which_will_remain_fresh_as_long_as_she_is_faithful_from_a_tuti-nam_c_1560 to expert review: reports\expert_review\review_card_the_soldier_receives_a_garland_of_roses_from_his_wife_which_will_remain_fresh_as_long_as_she_is_faithful_from_a_tuti-nam_c_1560.md
+2026-10-21 12:57:07,101 [INFO] Analyzing [50/84] mughal_style_detailed_male_hands_with_mughal_clothing_holding_a_stick (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 12:57:51,780 [INFO] Enqueued painting mughal_style_detailed_male_hands_with_mughal_clothing_holding_a_stick to expert review: reports\expert_review\review_card_mughal_style_detailed_male_hands_with_mughal_clothing_holding_a_stick.md
+2026-10-21 12:57:51,781 [INFO] Analyzing [51/84] princess-jahanara-aged-18-british-library-add-or-3129-f13v-a69932 (GT school=Mughal, period=None)
+2026-10-21 12:58:38,158 [INFO] Enqueued painting princess-jahanara-aged-18-british-library-add-or-3129-f13v-a69932 to expert review: reports\expert_review\review_card_princess-jahanara-aged-18-british-library-add-or-3129-f13v-a69932.md
+2026-10-21 12:58:38,161 [INFO] Analyzing [52/84] dhanu-solomon-takes-advice-from-the-animals-from-anvar-i-suhayli-by-husayn-cfb3ca (GT school=Mughal, period=None)
+2026-10-21 12:59:30,524 [INFO] Enqueued painting dhanu-solomon-takes-advice-from-the-animals-from-anvar-i-suhayli-by-husayn-cfb3ca to expert review: reports\expert_review\review_card_dhanu-solomon-takes-advice-from-the-animals-from-anvar-i-suhayli-by-husayn-cfb3ca.md
+2026-10-21 12:59:30,526 [INFO] Analyzing [53/84] portrait_of_raja_jagat_singh_of_nurpur_reigned_161846_probably_1619 (GT school=Mughal, period=None)
+2026-10-21 13:00:17,494 [INFO] Enqueued painting portrait_of_raja_jagat_singh_of_nurpur_reigned_161846_probably_1619 to expert review: reports\expert_review\review_card_portrait_of_raja_jagat_singh_of_nurpur_reigned_161846_probably_1619.md
+2026-10-21 13:00:17,495 [INFO] Analyzing [54/84] the_raja_of_ujjain_who_is_traveling_in_the_guise_of_a_yogi_meets_two_brothers_who_ask_him_to_equitably_partition_their_f_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:01:09,612 [INFO] Enqueued painting the_raja_of_ujjain_who_is_traveling_in_the_guise_of_a_yogi_meets_two_brothers_who_ask_him_to_equitably_partition_their_f_c_1560 to expert review: reports\expert_review\review_card_the_raja_of_ujjain_who_is_traveling_in_the_guise_of_a_yogi_meets_two_brothers_who_ask_him_to_equitably_partition_their_f_c_1560.md
+2026-10-21 13:01:09,613 [INFO] Analyzing [55/84] mughal_style_detailed_male_hand_holding_a_sheath (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:01:50,920 [INFO] Enqueued painting mughal_style_detailed_male_hand_holding_a_sheath to expert review: reports\expert_review\review_card_mughal_style_detailed_male_hand_holding_a_sheath.md
+2026-10-21 13:01:50,921 [INFO] Analyzing [56/84] the_bag_of_gold_which_he_received_for_the_slave_girl_being_stolen_in_a_mosque_the_young_man_of_baghdad_tears_his_cloths__c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:02:43,940 [INFO] Enqueued painting the_bag_of_gold_which_he_received_for_the_slave_girl_being_stolen_in_a_mosque_the_young_man_of_baghdad_tears_his_cloths__c_1560 to expert review: reports\expert_review\review_card_the_bag_of_gold_which_he_received_for_the_slave_girl_being_stolen_in_a_mosque_the_young_man_of_baghdad_tears_his_cloths__c_1560.md
+2026-10-21 13:02:43,941 [INFO] Analyzing [57/84] portrait_of_suraj_singh_rathor_raja_of_marwar_and_maternal_uncle_of_shah_jahan_a_page_from_the_prince_khurram_album_c_1600 (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 13:02:47,835 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:02:47,841 [INFO] Enqueued painting portrait_of_suraj_singh_rathor_raja_of_marwar_and_maternal_uncle_of_shah_jahan_a_page_from_the_prince_khurram_album_c_1600 to expert review: reports\expert_review\review_card_portrait_of_suraj_singh_rathor_raja_of_marwar_and_maternal_uncle_of_shah_jahan_a_page_from_the_prince_khurram_album_c_1600.md
+2026-10-21 13:02:47,843 [INFO] Analyzing [58/84] an_ambassador_before_humayun_c_1610 (GT school=Mughal, period=Jahangir Period (c. 1605-1627))
+2026-10-21 13:02:51,907 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:02:51,911 [INFO] Enqueued painting an_ambassador_before_humayun_c_1610 to expert review: reports\expert_review\review_card_an_ambassador_before_humayun_c_1610.md
+2026-10-21 13:02:51,912 [INFO] Analyzing [59/84] mughal_style_detailed_female_hand_with_traditional_ornaments (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:02:55,058 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:02:55,061 [INFO] Enqueued painting mughal_style_detailed_female_hand_with_traditional_ornaments to expert review: reports\expert_review\review_card_mughal_style_detailed_female_hand_with_traditional_ornaments.md
+2026-10-21 13:02:55,061 [INFO] Analyzing [60/84] mughal_style_detailed_face_of_men (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:02:58,838 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:02:58,841 [INFO] Enqueued painting mughal_style_detailed_face_of_men to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_men.md
+2026-10-21 13:02:58,842 [INFO] Analyzing [61/84] mughal_style_detailed_face_of_a_old_men_with_calm_expression (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:03:02,681 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:02,684 [INFO] Enqueued painting mughal_style_detailed_face_of_a_old_men_with_calm_expression to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_a_old_men_with_calm_expression.md
+2026-10-21 13:03:02,684 [INFO] Analyzing [62/84] mughal_style_face_of_a_men (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:03:06,198 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:06,201 [INFO] Enqueued painting mughal_style_face_of_a_men to expert review: reports\expert_review\review_card_mughal_style_face_of_a_men.md
+2026-10-21 13:03:06,201 [INFO] Analyzing [63/84] emperor-shah-jahan-1628-cropped-210abb (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 13:03:10,078 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:10,080 [INFO] Enqueued painting emperor-shah-jahan-1628-cropped-210abb to expert review: reports\expert_review\review_card_emperor-shah-jahan-1628-cropped-210abb.md
+2026-10-21 13:03:10,082 [INFO] Analyzing [64/84] hulagu_khan_giving_a_feast_and_dispensing_favor_upon_the_amirs_and_princes_from_a_chingiz-nama_book_of_chingiz_khan_of_t_c_15961600 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:13,600 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:13,602 [INFO] Enqueued painting hulagu_khan_giving_a_feast_and_dispensing_favor_upon_the_amirs_and_princes_from_a_chingiz-nama_book_of_chingiz_khan_of_t_c_15961600 to expert review: reports\expert_review\review_card_hulagu_khan_giving_a_feast_and_dispensing_favor_upon_the_amirs_and_princes_from_a_chingiz-nama_book_of_chingiz_khan_of_t_c_15961600.md
+2026-10-21 13:03:13,604 [INFO] Analyzing [65/84] the_gardener_seizes_and_beats_a_donkey_who_insisted_on_braying_while_the_deer_its_companion_flees_to_safety_from_a_tuti-_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:17,155 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:17,160 [INFO] Enqueued painting the_gardener_seizes_and_beats_a_donkey_who_insisted_on_braying_while_the_deer_its_companion_flees_to_safety_from_a_tuti-_c_1560 to expert review: reports\expert_review\review_card_the_gardener_seizes_and_beats_a_donkey_who_insisted_on_braying_while_the_deer_its_companion_flees_to_safety_from_a_tuti-_c_1560.md
+2026-10-21 13:03:17,162 [INFO] Analyzing [66/84] prince-azam-shah-on-horseback-david-collection-cropped-8e10ab (GT school=Mughal, period=None)
+2026-10-21 13:03:21,280 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:21,284 [INFO] Enqueued painting prince-azam-shah-on-horseback-david-collection-cropped-8e10ab to expert review: reports\expert_review\review_card_prince-azam-shah-on-horseback-david-collection-cropped-8e10ab.md
+2026-10-21 13:03:21,285 [INFO] Analyzing [67/84] babur_receives_booty_and_humayuns_salute_after_the_victory_over_sultan_ibrahim_in_1526_from_an_akbar-nama_book_of_akbar__c_15961597_or_1604 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:25,167 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:25,169 [INFO] Enqueued painting babur_receives_booty_and_humayuns_salute_after_the_victory_over_sultan_ibrahim_in_1526_from_an_akbar-nama_book_of_akbar__c_15961597_or_1604 to expert review: reports\expert_review\review_card_babur_receives_booty_and_humayuns_salute_after_the_victory_over_sultan_ibrahim_in_1526_from_an_akbar-nama_book_of_akbar__c_15961597_or_1604.md
+2026-10-21 13:03:25,171 [INFO] Analyzing [68/84] circumcision_ceremony_for_akbars_sons_painting_126_from_an_akbar-nama_book_of_akbar_of_abul_fazl_indian_15511602_c_16023 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:28,714 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:28,718 [INFO] Enqueued painting circumcision_ceremony_for_akbars_sons_painting_126_from_an_akbar-nama_book_of_akbar_of_abul_fazl_indian_15511602_c_16023 to expert review: reports\expert_review\review_card_circumcision_ceremony_for_akbars_sons_painting_126_from_an_akbar-nama_book_of_akbar_of_abul_fazl_indian_15511602_c_16023.md
+2026-10-21 13:03:28,719 [INFO] Analyzing [69/84] image_from_akbarnama (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:32,384 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:32,386 [INFO] Enqueued painting image_from_akbarnama to expert review: reports\expert_review\review_card_image_from_akbarnama.md
+2026-10-21 13:03:32,387 [INFO] Analyzing [70/84] mughal_ruler_humayun_defeating_the_afghans_before_reconquering_india_folio_from_an_akbar-nama_book_of_akbar_of_abul_fazl_c_1590 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:36,282 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:36,283 [INFO] Enqueued painting mughal_ruler_humayun_defeating_the_afghans_before_reconquering_india_folio_from_an_akbar-nama_book_of_akbar_of_abul_fazl_c_1590 to expert review: reports\expert_review\review_card_mughal_ruler_humayun_defeating_the_afghans_before_reconquering_india_folio_from_an_akbar-nama_book_of_akbar_of_abul_fazl_c_1590.md
+2026-10-21 13:03:36,284 [INFO] Analyzing [71/84] the_young_man_changes_himself_to_look_like_mansur_and_thus_inveigles_himself_into_the_bed_of_mansurs_wife_but_is_put_off_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:40,080 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:40,081 [INFO] Enqueued painting the_young_man_changes_himself_to_look_like_mansur_and_thus_inveigles_himself_into_the_bed_of_mansurs_wife_but_is_put_off_c_1560 to expert review: reports\expert_review\review_card_the_young_man_changes_himself_to_look_like_mansur_and_thus_inveigles_himself_into_the_bed_of_mansurs_wife_but_is_put_off_c_1560.md
+2026-10-21 13:03:40,082 [INFO] Analyzing [72/84] self-portrait-of-farrukh-beg-c5676e (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 13:03:43,618 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:43,619 [INFO] Enqueued painting self-portrait-of-farrukh-beg-c5676e to expert review: reports\expert_review\review_card_self-portrait-of-farrukh-beg-c5676e.md
+2026-10-21 13:03:43,620 [INFO] Analyzing [73/84] mughal_style_detailed_face_of_court_lady (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:03:46,795 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:46,797 [INFO] Enqueued painting mughal_style_detailed_face_of_court_lady to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_court_lady.md
+2026-10-21 13:03:46,797 [INFO] Analyzing [74/84] album-page-with-a-portrait-of-namdar-khan-0-40de28 (GT school=Mughal, period=None)
+2026-10-21 13:03:50,499 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:50,502 [INFO] Enqueued painting album-page-with-a-portrait-of-namdar-khan-0-40de28 to expert review: reports\expert_review\review_card_album-page-with-a-portrait-of-namdar-khan-0-40de28.md
+2026-10-21 13:03:50,503 [INFO] Analyzing [75/84] the_handmaiden_again_appeals_for_justice_and_the_prince_is_led_to_the_place_of_execution_for_the_third_time_from_a_tuti-_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:03:54,594 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:54,596 [INFO] Enqueued painting the_handmaiden_again_appeals_for_justice_and_the_prince_is_led_to_the_place_of_execution_for_the_third_time_from_a_tuti-_c_1560 to expert review: reports\expert_review\review_card_the_handmaiden_again_appeals_for_justice_and_the_prince_is_led_to_the_place_of_execution_for_the_third_time_from_a_tuti-_c_1560.md
+2026-10-21 13:03:54,597 [INFO] Analyzing [76/84] mughal_style_face_of_a_young_mughal_men (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:03:57,843 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:03:57,847 [INFO] Enqueued painting mughal_style_face_of_a_young_mughal_men to expert review: reports\expert_review\review_card_mughal_style_face_of_a_young_mughal_men.md
+2026-10-21 13:03:57,848 [INFO] Analyzing [77/84] court_lady_singing_and_playing_the_vina_c_1760 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 13:04:01,653 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:01,654 [INFO] Enqueued painting court_lady_singing_and_playing_the_vina_c_1760 to expert review: reports\expert_review\review_card_court_lady_singing_and_playing_the_vina_c_1760.md
+2026-10-21 13:04:01,654 [INFO] Analyzing [78/84] man_main (GT school=Mughal, period=None)
+2026-10-21 13:04:05,541 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:05,543 [INFO] Enqueued painting man_main to expert review: reports\expert_review\review_card_man_main.md
+2026-10-21 13:04:05,543 [INFO] Analyzing [79/84] image-from-rawpixel-id-8846131-original (GT school=Mughal, period=None)
+2026-10-21 13:04:09,958 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:09,961 [INFO] Enqueued painting image-from-rawpixel-id-8846131-original to expert review: reports\expert_review\review_card_image-from-rawpixel-id-8846131-original.md
+2026-10-21 13:04:09,962 [INFO] Analyzing [80/84] mughal-dynasty-sadi-in-a-rose-garden-reign-of-emperor-shah-jahan-early-16th-02213d (1) (GT school=Mughal, period=None)
+2026-10-21 13:04:13,448 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:13,454 [INFO] Enqueued painting mughal-dynasty-sadi-in-a-rose-garden-reign-of-emperor-shah-jahan-early-16th-02213d (1) to expert review: reports\expert_review\review_card_mughal-dynasty-sadi-in-a-rose-garden-reign-of-emperor-shah-jahan-early-16th-02213d (1).md
+2026-10-21 13:04:13,454 [INFO] Analyzing [81/84] mughal_style_detailed_male_hand_holding_a_cross_bag (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:04:16,535 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:16,537 [INFO] Enqueued painting mughal_style_detailed_male_hand_holding_a_cross_bag to expert review: reports\expert_review\review_card_mughal_style_detailed_male_hand_holding_a_cross_bag.md
+2026-10-21 13:04:16,537 [INFO] Analyzing [82/84] seven_men_disputing_possession_of_a_woman_bring_her_before_the_tree_of_justice_into_which_she_is_absorbed_from_a_tuti-na_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:04:20,299 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:20,302 [INFO] Enqueued painting seven_men_disputing_possession_of_a_woman_bring_her_before_the_tree_of_justice_into_which_she_is_absorbed_from_a_tuti-na_c_1560 to expert review: reports\expert_review\review_card_seven_men_disputing_possession_of_a_woman_bring_her_before_the_tree_of_justice_into_which_she_is_absorbed_from_a_tuti-na_c_1560.md
+2026-10-21 13:04:20,302 [INFO] Analyzing [83/84] mughal_style_detailed_face_of_a_men_with_simple_expression (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:04:23,465 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:23,469 [INFO] Enqueued painting mughal_style_detailed_face_of_a_men_with_simple_expression to expert review: reports\expert_review\review_card_mughal_style_detailed_face_of_a_men_with_simple_expression.md
+2026-10-21 13:04:23,470 [INFO] Analyzing [84/84] posthumous_portrait_of_emperor_jahangir_under_a_canopy_recto_c_1650 (GT school=Mughal, period=Jahangir Period (c. 1605-1627))
+2026-10-21 13:04:27,002 [WARNING] Could not parse VLM response as direct JSON: Expecting value: line 1 column 1 (char 0). Raw response snippet: 
+2026-10-21 13:04:27,003 [INFO] Enqueued painting posthumous_portrait_of_emperor_jahangir_under_a_canopy_recto_c_1650 to expert review: reports\expert_review\review_card_posthumous_portrait_of_emperor_jahangir_under_a_canopy_recto_c_1650.md
+2026-10-21 13:04:27,005 [INFO] === STEP 5: Scoring Reasoning and Generating Benchmark Report ===
+2026-10-21 13:04:27,016 [INFO] Knowledge Base loaded: 9 ragas, 7 schools, 5 periods.
+2026-10-21 13:04:27,028 [INFO] Reasoning evaluation report saved to reports\vlm_reasoning_benchmark.md
+2026-10-21 13:04:27,108 [INFO] VLM failures/timeouts: 0/84
+2026-10-21 13:04:27,108 [INFO] === VLM REASONING PIPELINE EXECUTION COMPLETE ===
+2026-10-21 13:04:27,109 [INFO] Reasoning report: C:\Users\anush\Documents\Academic\Sem 7\BTP\reports\vlm_reasoning_benchmark.md

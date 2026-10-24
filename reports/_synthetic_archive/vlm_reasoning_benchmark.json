@@ -1,0 +1,54 @@
+{
+  "metrics": {
+    "total_paintings_evaluated": 2,
+    "answer_accuracy": {
+      "raga": 0.5,
+      "school": 0.5,
+      "period": 0.5,
+      "artist": 0.5
+    },
+    "uncertain_rates": {
+      "raga": 0.5,
+      "school": 0.5,
+      "period": 0.5,
+      "artist": 0.5
+    },
+    "mean_evidence_citation_correctness": 0.625,
+    "classifier_vlm_agreement_rate": 1.0,
+    "expert_review_routing_rate": 0.5
+  },
+  "detailed_cases": [
+    {
+      "image_id": "painting_000",
+      "raga_correct": true,
+      "raga_uncertain": false,
+      "school_correct": true,
+      "school_uncertain": false,
+      "period_correct": true,
+      "period_uncertain": false,
+      "artist_correct": true,
+      "artist_uncertain": false,
+      "evidence_correctness_score": 0.75,
+      "valid_citations": 3,
+      "spurious_citations": 1,
+      "classifier_agreement": true,
+      "routed_to_expert": false
+    },
+    {
+      "image_id": "painting_001",
+      "raga_correct": false,
+      "raga_uncertain": true,
+      "school_correct": false,
+      "school_uncertain": true,
+      "period_correct": false,
+      "period_uncertain": true,
+      "artist_correct": false,
+      "artist_uncertain": true,
+      "evidence_correctness_score": 0.5,
+      "valid_citations": 2,
+      "spurious_citations": 2,
+      "classifier_agreement": true,
+      "routed_to_expert": true
+    }
+  ]
+}

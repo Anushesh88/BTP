@@ -1,0 +1,53 @@
+2026-10-21 13:27:55,027 [INFO] === STEP 1: Loading Held-Out Test Split ===
+2026-10-21 13:27:55,211 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 13:27:55,214 [INFO] Evaluating 20 held-out paintings.
+2026-10-21 13:27:55,214 [INFO] === STEP 2: Computing Classifier Top-3 Candidates ===
+2026-10-21 13:27:55,423 [INFO] Multi-Head checkpoint successfully loaded from: models\multihead_fused_classifier.pt
+2026-10-21 13:27:55,423 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 13:27:56,698 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 13:27:57,090 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-21 13:27:57,114 [WARNING] Fused cache data\cache\fused_test_vit_b_16.npz does not match the requested paintings. Recomputing...
+2026-10-21 13:27:57,694 [INFO] Extracting dual-branch fused features on 20 paintings...
+2026-10-21 13:28:00,419 [INFO] Extracted [5/20] paintings (fused dim: 1632).
+2026-10-21 13:28:01,908 [INFO] Extracted [10/20] paintings (fused dim: 1632).
+2026-10-21 13:28:03,733 [INFO] Extracted [15/20] paintings (fused dim: 1632).
+2026-10-21 13:28:05,166 [INFO] Extracted [20/20] paintings (fused dim: 1632).
+2026-10-21 13:28:05,178 [INFO] Saved fused feature matrix of shape (20, 1632) to data\cache\fused_test_vit_b_16.npz
+2026-10-21 13:28:05,247 [INFO] Classifier candidates from: Phase 7 multi-head fused classifier (temperature-calibrated)
+2026-10-21 13:28:05,360 [INFO] === STEP 3: Initializing VLM Client (qwen_ollama: qwen2.5vl:7b) ===
+2026-10-21 13:28:05,360 [INFO] Initialized Qwen VLM Client with model 'qwen2.5vl:7b' at http://127.0.0.1:11434
+2026-10-21 13:28:05,362 [INFO] Knowledge Base loaded: 9 ragas, 7 schools, 5 periods.
+2026-10-21 13:28:05,364 [INFO] === STEP 4: Executing Multimodal VLM Reasoning & Cross-Check ===
+2026-10-21 13:28:05,365 [INFO] Analyzing [1/20] ma-55333 (GT school=Rajasthani, period=None)
+2026-10-21 13:30:11,416 [INFO] Enqueued painting ma-55333 to expert review: reports\vlm_7b_sample\expert_review\review_card_ma-55333.md
+2026-10-21 13:30:11,417 [INFO] Analyzing [2/20] FS-8091_09 (GT school=Rajasthani, period=None)
+2026-10-21 13:32:15,085 [INFO] Enqueued painting FS-8091_09 to expert review: reports\vlm_7b_sample\expert_review\review_card_FS-8091_09.md
+2026-10-21 13:32:15,086 [INFO] Analyzing [3/20] FS-5814_13 (GT school=Rajasthani, period=None)
+2026-10-21 13:34:22,951 [INFO] Enqueued painting FS-5814_13 to expert review: reports\vlm_7b_sample\expert_review\review_card_FS-5814_13.md
+2026-10-21 13:34:22,952 [INFO] Analyzing [4/20] ma-45020 (GT school=Rajasthani, period=None)
+2026-10-21 13:36:13,647 [INFO] Enqueued painting ma-45020 to expert review: reports\vlm_7b_sample\expert_review\review_card_ma-45020.md
+2026-10-21 13:36:13,649 [INFO] Analyzing [5/20] FS-7407_27 (GT school=Pahari, period=None)
+2026-10-21 13:38:20,599 [INFO] Enqueued painting FS-7407_27 to expert review: reports\vlm_7b_sample\expert_review\review_card_FS-7407_27.md
+2026-10-21 13:38:20,601 [INFO] Analyzing [6/20] mughal_style_detailed_face_of_a_men_kept_hand_on_head (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:40:27,365 [INFO] Analyzing [7/20] the_bag_of_gold_which_he_received_for_the_slave_girl_being_stolen_in_a_mosque_the_young_man_of_baghdad_tears_his_cloths__c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:42:13,330 [INFO] Analyzing [8/20] hulagu_khan_giving_a_feast_and_dispensing_favor_upon_the_amirs_and_princes_from_a_chingiz-nama_book_of_chingiz_khan_of_t_c_15961600 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:43:47,675 [INFO] Analyzing [9/20] mughal_style_detailed_female_hands_with_traditional_mughal_clothing_clapping (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:45:11,292 [INFO] Analyzing [10/20] 2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_ (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 13:47:08,169 [INFO] Enqueued painting 2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_ to expert review: reports\vlm_7b_sample\expert_review\review_card_2019_NYR_17464_0326_000_a_portrait_of_nawab_asad_khan_india_circa_1650032320_.md
+2026-10-21 13:47:08,171 [INFO] Analyzing [11/20] oval_portrait_of_a_woman_in_a_chaghtai_hat_c_174050 (GT school=Mughal, period=Late Mughal / 18th Century)
+2026-10-21 13:49:02,803 [INFO] Analyzing [12/20] mughal_style_detailed_male_hand_holding_a_sheath (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:50:45,321 [INFO] Analyzing [13/20] circumcision_ceremony_for_akbars_sons_painting_126_from_an_akbar-nama_book_of_akbar_of_abul_fazl_indian_15511602_c_16023 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 13:52:14,468 [INFO] Analyzing [14/20] mughal_style_detailed_face_of_a_old_men_with_calm_expression (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:53:52,586 [INFO] Analyzing [15/20] leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650 (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 13:55:55,607 [INFO] Enqueued painting leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650 to expert review: reports\vlm_7b_sample\expert_review\review_card_leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650.md
+2026-10-21 13:55:55,610 [INFO] Analyzing [16/20] 2019_NYR_17464_0077_000_portrait_of_shah_jahan_mughal_india_circa_1700120632_ (GT school=Mughal, period=Shah Jahan Period (c. 1628-1658))
+2026-10-21 13:57:50,257 [INFO] Analyzing [17/20] 2019_NYR_17464_0325_000_inayat_khan_holding_a_portrait_of_a_european_soldier_mughal_india_circ032259_ (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 13:59:36,305 [INFO] Analyzing [18/20] mughal_style_detailed_male_hand_with_traditional_clothing_resting_on_floor (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 14:01:14,145 [INFO] Analyzing [19/20] mughal_style_face_of_a_men (GT school=Mughal, period=Classical Mughal (16th-17th Century))
+2026-10-21 14:03:05,567 [INFO] Analyzing [20/20] the_raja_of_ujjain_who_is_traveling_in_the_guise_of_a_yogi_meets_two_brothers_who_ask_him_to_equitably_partition_their_f_c_1560 (GT school=Mughal, period=Akbar Period (c. 1556-1605))
+2026-10-21 14:05:06,825 [INFO] === STEP 5: Scoring Reasoning and Generating Benchmark Report ===
+2026-10-21 14:05:06,852 [INFO] Knowledge Base loaded: 9 ragas, 7 schools, 5 periods.
+2026-10-21 14:05:06,877 [INFO] Reasoning evaluation report saved to reports\vlm_7b_sample\vlm_reasoning_benchmark.md
+2026-10-21 14:05:06,980 [INFO] VLM failures/timeouts: 0/20
+2026-10-21 14:05:06,980 [INFO] === VLM REASONING PIPELINE EXECUTION COMPLETE ===
+2026-10-21 14:05:06,982 [INFO] Reasoning report: C:\Users\anush\Documents\Academic\Sem 7\BTP\reports\vlm_7b_sample\vlm_reasoning_benchmark.md

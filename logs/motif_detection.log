@@ -1,0 +1,34 @@
+2026-10-21 11:50:07,384 [INFO] === STEP 1: Ingesting Manifest ===
+2026-10-21 11:50:07,478 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 11:50:07,480 [INFO] Processing motif detection on 564 paintings.
+2026-10-21 11:50:07,480 [INFO] SlidingWindowGenerator initialized: window=640x640, stride=320x320 (Overlap: X=50.0%, Y=50.0%)
+2026-10-21 11:50:07,725 [INFO] Loading YOLO-World model: yolov8s-worldv2.pt
+2026-10-21 11:50:11,556 [INFO] YOLO-World initialized with 30 open-vocabulary classes.
+2026-10-21 11:50:11,556 [INFO] === STEP 2: Running Multi-Window Detection & Global NMS ===
+2026-10-21 11:50:13,653 [INFO] Saved motif detection overlay to reports\motif_detection_a_woman_with_two_children_having_abandoned_her_home_goes_into_the_forest_where_she_encounters_a_leopard_from_a_tuti-nama_c_1560.png
+2026-10-21 11:50:13,653 [INFO] [1/564] a_woman_with_two_children_having_abandoned_her_home_goes_into_the_forest_where_she_encounters_a_leopard_from_a_tuti-nama_c_1560: 13 motifs detected & cropped.
+2026-10-21 11:50:23,156 [INFO] [25/564] the_cat_attacks_the_mice_which_disturb_the_lion_from_a_tuti-nama_tales_of_a_parrot_fifteenth_night_c_1560: 18 motifs detected & cropped.
+2026-10-21 11:50:34,477 [INFO] [50/564] the_hunter_throws_away_the_baby_parrots_who_pretend_to_be_dead_and_captures_the_mother_from_a_tuti-nama_tales_of_a_parro_c_1560: 11 motifs detected & cropped.
+2026-10-21 11:50:48,377 [INFO] [75/564] the_monkey_advises_the_suspicious_lion_to_cast_off_fear_and_take_possession_of_his_territory_from_a_tuti-nama_tales_of_a_c_1560: 19 motifs detected & cropped.
+2026-10-21 11:51:00,405 [INFO] [100/564] the_parrot_addresses_khujasta_at_the_beginning_of_the_thirteenth_night_from_a_tuti-nama_tales_of_a_parrot_c_1560: 12 motifs detected & cropped.
+2026-10-21 11:51:11,342 [INFO] [125/564] the_prince_having_deprived_the_snake_of_its_natural_food_a_frog_feeds_it_with_a_piece_of_his_own_flesh_from_a_tuti-nama__c_1560: 17 motifs detected & cropped.
+2026-10-21 11:51:24,438 [INFO] [150/564] the_young_prince_is_crowned_and_the_wicked_handmaiden_is_executed_from_a_tuti-nama_tales_of_a_parrot_eighth_night_c_1560: 51 motifs detected & cropped.
+2026-10-21 11:51:32,807 [INFO] [175/564] a_royal_picnic_on_a_terrace_c_1620: 27 motifs detected & cropped.
+2026-10-21 11:51:52,423 [INFO] [200/564] the_astrologer_predicts_a_calamity_for_the_newly_born_prince_in_his_thirteenth_year_but_one_which_he_would_be_able_to_ov_c_1560: 19 motifs detected & cropped.
+2026-10-21 11:52:00,893 [INFO] [225/564] the_deceitful_wife_persuades_her_husband_to_sleep_in_the_same_place_where_she_had_previously_slept_with_her_lover_from_a_c_1560: 8 motifs detected & cropped.
+2026-10-21 11:52:08,833 [INFO] [250/564] image-from-rawpixel-id-9723890-original: 18 motifs detected & cropped.
+2026-10-21 11:52:15,831 [INFO] [275/564] jahangir: 11 motifs detected & cropped.
+2026-10-21 11:52:22,647 [INFO] [300/564] portrait-of-muammad-ali-beg-safavid-ambassador-mughal-style-circa-1660-3e5b56: 7 motifs detected & cropped.
+2026-10-21 11:52:32,183 [INFO] [325/564] mahliqa_daughter_of_the_emperor_of_china_pointing_at_the_bird-man_khwaja_mubarak_a_leaf_from_a_poetical_romance_relating_c_1710: 26 motifs detected & cropped.
+2026-10-21 11:52:39,490 [INFO] [350/564] tiered_court_scene_c_1735: 27 motifs detected & cropped.
+2026-10-21 11:52:48,484 [INFO] [375/564] the_viziers_son_receives_the_magic_wooden_parrot_from_the_wife_of_the_merchant_who_is_drunk_and_has_a_replica_made_by_a__c_1560: 35 motifs detected & cropped.
+2026-10-21 11:52:58,501 [INFO] [400/564] ali-adil-shah-ii-40e4f1: 13 motifs detected & cropped.
+2026-10-21 11:53:06,763 [INFO] [425/564] battle_between_manuchihr_and_tur_from_a_shah-nama_book_of_kings_of_firdausi_persian_c_9341020_c_1610_2: 26 motifs detected & cropped.
+2026-10-21 11:53:14,583 [INFO] [450/564] FS-F1907.629_001: 33 motifs detected & cropped.
+2026-10-21 11:53:19,536 [INFO] [475/564] FS-6786_07: 23 motifs detected & cropped.
+2026-10-21 11:53:28,519 [INFO] [500/564] 2019_NYR_17464_0324_000_a_nobleman_possibly_asaf_khan_attributable_to_bishandas_or_nanha_mugha032237_: 13 motifs detected & cropped.
+2026-10-21 11:53:36,401 [INFO] [525/564] mughal_style_detailed_female_hands_with_traditional_mughal_clothing_clapping: 1 motifs detected & cropped.
+2026-10-21 11:53:43,614 [INFO] [550/564] mughal_ruler_humayun_defeating_the_afghans_before_reconquering_india_folio_from_an_akbar-nama_book_of_akbar_of_abul_fazl_c_1590: 19 motifs detected & cropped.
+2026-10-21 11:53:47,193 [INFO] [564/564] posthumous_portrait_of_emperor_jahangir_under_a_canopy_recto_c_1650: 5 motifs detected & cropped.
+2026-10-21 11:53:47,313 [INFO] Saved 9609 motif records to data\processed\motifs\detected_motifs_manifest.jsonl
+2026-10-21 11:53:47,355 [INFO] Phase 5 Report generated at: reports\motif_detection_report.md

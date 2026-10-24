@@ -1,0 +1,23 @@
+2026-10-21 13:05:58,515 [INFO] === STEP 1: Ingesting Manifest ===
+2026-10-21 13:05:58,699 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 13:05:58,700 [INFO] Extracting features for 60 paintings.
+2026-10-21 13:05:58,728 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 13:05:59,722 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 13:06:00,117 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-21 13:06:00,117 [INFO] === STEP 2: Extracting Handcrafted & Deep Fused Features ===
+2026-10-21 13:06:01,061 [INFO] Extracting dual-branch fused features on 60 paintings...
+2026-10-21 13:06:03,485 [INFO] Extracted [5/60] paintings (fused dim: 1632).
+2026-10-21 13:06:05,694 [INFO] Extracted [10/60] paintings (fused dim: 1632).
+2026-10-21 13:06:07,860 [INFO] Extracted [15/60] paintings (fused dim: 1632).
+2026-10-21 13:06:10,071 [INFO] Extracted [20/60] paintings (fused dim: 1632).
+2026-10-21 13:06:12,295 [INFO] Extracted [25/60] paintings (fused dim: 1632).
+2026-10-21 13:06:14,427 [INFO] Extracted [30/60] paintings (fused dim: 1632).
+2026-10-21 13:06:16,478 [INFO] Extracted [35/60] paintings (fused dim: 1632).
+2026-10-21 13:06:18,660 [INFO] Extracted [40/60] paintings (fused dim: 1632).
+2026-10-21 13:06:20,933 [INFO] Extracted [45/60] paintings (fused dim: 1632).
+2026-10-21 13:06:23,135 [INFO] Extracted [50/60] paintings (fused dim: 1632).
+2026-10-21 13:06:25,321 [INFO] Extracted [55/60] paintings (fused dim: 1632).
+2026-10-21 13:06:27,433 [INFO] Extracted [60/60] paintings (fused dim: 1632).
+2026-10-21 13:06:27,459 [INFO] Saved fused feature matrix of shape (60, 1632) to data\cache\fused_profile_vit_b_16.npz
+2026-10-21 13:06:27,955 [INFO] Saved feature profile graphic to reports\feature_distributions.png
+2026-10-21 13:06:27,956 [INFO] Phase 6 Report generated at: reports\feature_fusion_report.md

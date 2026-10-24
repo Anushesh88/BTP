@@ -1,0 +1,30 @@
+2026-10-21 12:07:16,626 [INFO] === STEP 1: Ingesting Manifest & Creating Leak-Free Grouped Splits ===
+2026-10-21 12:07:16,727 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 12:07:16,727 [INFO] === STEP 2: Extracting Dual-Branch Fused Features for Train/Val/Test ===
+2026-10-21 12:07:16,745 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-21 12:07:17,500 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-21 12:07:17,881 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-21 12:07:17,882 [INFO] Loading cached fused features from: data\cache\fused_train_vit_b_16.npz
+2026-10-21 12:07:17,897 [INFO] Loading cached fused features from: data\cache\fused_val_vit_b_16.npz
+2026-10-21 12:07:17,902 [INFO] Loading cached fused features from: data\cache\fused_test_vit_b_16.npz
+2026-10-21 12:07:17,905 [INFO] Fused Feature Dimension: 1632 (Train: 395, Val: 85, Test: 84)
+2026-10-21 12:07:17,905 [INFO] === STEP 3: Training Multi-Head Neural Classifier ===
+2026-10-21 12:07:17,907 [INFO] Target 'raga': 4 classes. Balanced weights computed.
+2026-10-21 12:07:17,908 [INFO] Target 'school': 2 classes. Balanced weights computed.
+2026-10-21 12:07:17,909 [INFO] Target 'period': 6 classes. Balanced weights computed.
+2026-10-21 12:07:17,909 [INFO] Target 'artist': 2 classes. Balanced weights computed.
+2026-10-21 12:07:17,919 [INFO] Starting Multi-Head training for 100 epochs on device: cuda
+2026-10-21 12:07:18,760 [INFO] Epoch [05/100] Train Loss: 2.4343 | Val Loss: 2.9862 | Val Acc: 88.86%
+2026-10-21 12:07:19,424 [INFO] Epoch [10/100] Train Loss: 1.4659 | Val Loss: 3.2560 | Val Acc: 88.86%
+2026-10-21 12:07:20,018 [INFO] Epoch [15/100] Train Loss: 0.8528 | Val Loss: 3.3171 | Val Acc: 90.62%
+2026-10-21 12:07:20,561 [INFO] Early stopping triggered at epoch 19. Best Val Loss: 2.8018
+2026-10-21 12:07:20,562 [INFO] Multi-Head model training complete.
+2026-10-21 12:07:20,610 [INFO] Multi-Head checkpoint saved to: models\multihead_fused_classifier.pt
+2026-10-21 12:07:20,610 [INFO] === STEP 4: Evaluating Multi-Head Classifier on Test Split ===
+2026-10-21 12:07:21,211 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_raga.png
+2026-10-21 12:07:21,403 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_school.png
+2026-10-21 12:07:21,645 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_period.png
+2026-10-21 12:07:21,828 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_artist.png
+2026-10-21 12:07:21,830 [INFO] Saved benchmark metrics to reports\multihead_benchmark.json
+2026-10-21 12:07:21,832 [INFO] Saved benchmark markdown report to reports\multihead_benchmark.md
+2026-10-21 12:07:21,834 [INFO] Phase 7 Report generated at: reports\multihead_training_report.md

@@ -1,0 +1,13 @@
+2026-10-21 13:05:43,676 [INFO] === STEP 1: Ingesting Painting Manifest ===
+2026-10-21 13:05:43,804 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
+2026-10-21 13:05:43,805 [INFO] Loaded 5 paintings for Phase 4 processing.
+2026-10-21 13:05:43,805 [INFO] SlidingWindowGenerator initialized: window=512x512, stride=256x256 (Overlap: X=50.0%, Y=50.0%)
+2026-10-21 13:05:43,805 [INFO] === STEP 2: Executing High-Res Preprocessing & Windowing ===
+2026-10-21 13:05:46,926 [INFO] Saved preprocessing inspection graphic to reports\preprocessing_inspection_a_woman_with_two_children_having_abandoned_her_home_goes_into_the_forest_where_she_encounters_a_leopard_from_a_tuti-nama_c_1560.png
+2026-10-21 13:05:46,927 [INFO] [1/5] Processed a_woman_with_two_children_having_abandoned_her_home_goes_into_the_forest_where_she_encounters_a_leopard_from_a_tuti-nama_c_1560: 2250x3400 -> 104 windows.
+2026-10-21 13:05:47,511 [INFO] [2/5] Processed bashir_confides_his_love_for_habbaza_to_an_arab_friend_and_sends_him_to_her_with_a_message_from_a_tuti-nama_tales_of_a_p_c_1560: 2209x3400 -> 104 windows.
+2026-10-21 13:05:47,882 [INFO] [3/5] Processed habbaza_meets_bashir_under_a_tree_from_a_tuti-nama_tales_of_a_parrot_twenty-fourth_night_c_1560: 2046x2702 -> 70 windows.
+2026-10-21 13:05:48,209 [INFO] [4/5] Processed habbazas_sister_who_is_sent_to_console_her_discovers_the_disguised_arab_in_her_place_from_a_tuti-nama_tales_of_a_parrot__c_1560: 2057x2263 -> 64 windows.
+2026-10-21 13:05:48,470 [INFO] [5/5] Processed kaiwan_sends_a_message_of_love_to_khurshid_wife_of_his_brother_utarid_who_is_away_on_a_journey_from_a_tuti-nama_tales_of_c_1560: 2099x1763 -> 48 windows.
+2026-10-21 13:05:48,473 [INFO] Saved total of 390 window records to data\processed\windows_manifest.jsonl
+2026-10-21 13:05:48,474 [INFO] Phase 4 Report generated at: reports\preprocessing_report.md

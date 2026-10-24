@@ -1,0 +1,167 @@
+{
+  "ragas": {
+    "Bhairava": {
+      "raga_name": "Bhairava",
+      "melodic_family": "Bhairava (Head of Bhairava Ragamala family)",
+      "time_prahar": "Dawn / Early Morning (Prathama Prahar)",
+      "season": "Autumn (Sharad)",
+      "presiding_deity": "Shiva in Bhairava aspect",
+      "rasa_mood": "Shanta (peaceful contemplation) and Raudra (solemn grandeur)",
+      "dhyana_verse_sanskrit": "गङ्गाधरः शशिकलातिलकस्त्रिनेत्रो भस्माङ्गरागरुचिरः सितकण्ठहारः। कैलासशैलशिखरे स्थित आत्मसंस्थो रागोऽयमुत्तमपदाभिधभैरवाख्यः॥",
+      "dhyana_verse_translation": "Bearing the celestial Ganga, adorned with the crescent moon on his brow, three-eyed, smeared with white ash, wearing a shining garland on his fair throat, seated self-contained on the peak of Mount Kailash—such is the supreme Raga Bhairava.",
+      "key_iconographic_motifs": [
+        "Lord Shiva seated on tiger skin or lotus pedestal",
+        "Trident (trishula) and damaru drum held in hands",
+        "Nandi the bull reclining beside him",
+        "Crescent moon on forehead and serpent around neck",
+        "Ascetic devotees offering bilva leaves or burning camphor",
+        "Mount Kailash rocky mountainous backdrop with sacred river"
+      ],
+      "color_associations": ["White ash", "Grey", "Pure white garments", "Pale blue sky of dawn"]
+    },
+    "Bhairavi": {
+      "raga_name": "Bhairavi",
+      "melodic_family": "Ragaputra / Ragini of Bhairava",
+      "time_prahar": "Morning dawn",
+      "season": "Autumn",
+      "presiding_deity": "Goddess Parvati / Bhairavi",
+      "rasa_mood": "Bhakti (devotion) and Viraha (longing)",
+      "dhyana_verse_sanskrit": "स्फटिकरचितपीठे मन्दिरे सारसाक्षी कमलदलसमानैः पाणिभिः पूजयन्ती। हरमचलनिवासं तालनादप्रवीणा भवति समयभावा भैरवी रागिणी सा॥",
+      "dhyana_verse_translation": "Seated on a crystal throne within a lake pavilion, lotus-eyed, worshipping Lord Shiva with hands delicate as lotus petals, adept at rhythmic cymbals—such is Ragini Bhairavi.",
+      "key_iconographic_motifs": [
+        "Solitary young heroine (nayika) worshipping a Shiva lingam",
+        "Offering of bilva leaves, lotus flowers, and incense before a shrine",
+        "Playing small brass cymbals (manjira) or resting hands reverently",
+        "Lake filled with blooming lotuses in front of marble shrine",
+        "Pair of attendant maidens bearing ritual trays"
+      ],
+      "color_associations": ["Saffron", "White marble", "Rose pink petals", "Deep green lake water"]
+    },
+    "Malkaus": {
+      "raga_name": "Malkaus",
+      "melodic_family": "Malkaus (Head of Malkaus family)",
+      "time_prahar": "Midnight (Nishitha / Tritiya Prahar)",
+      "season": "Winter (Hemanta / Shishira)",
+      "presiding_deity": "Lord Shiva / Prince of Valor",
+      "rasa_mood": "Veera (heroic) and Gambhira (profound contemplation)",
+      "dhyana_verse_sanskrit": "असिचर्मधरः शूरो रक्तवस्त्रविभूषणः। मालवश्रीसमायुक्तो मालकौशः प्रकीर्तितः॥",
+      "dhyana_verse_translation": "Bearing a gleaming sword and shield, heroic, adorned in crimson red garments, accompanied by maidens offering betel—such is proclaimed the noble Raga Malkaus.",
+      "key_iconographic_motifs": [
+        "Noble prince or hero seated in regal pavilion or palace terrace at night",
+        "Holding a sword, golden staff, or flower while gazing at his beloved",
+        "Night sky studded with stars or sliver of crescent moon",
+        "Attendant maidens holding golden chauri (flywhisk) and betel boxes",
+        "Musicians playing bin or rabab in attendance"
+      ],
+      "color_associations": ["Deep crimson red", "Midnight blue", "Gold brocade", "Emerald green cushions"]
+    },
+    "Hindol": {
+      "raga_name": "Hindol",
+      "melodic_family": "Hindol family",
+      "time_prahar": "Morning (Prathama Prahar)",
+      "season": "Spring (Vasanta)",
+      "presiding_deity": "Kamadeva / Lord Krishna",
+      "rasa_mood": "Shringara (romantic love) and Utsaha (festive joy)",
+      "dhyana_verse_sanskrit": "कन्दर्पदर्पदमनेन समाभिरामा दोलाधिरूढतनुरायतनेत्रपद्मा। सङ्गीतकौतुकपरायणमञ्जुवाचा हिन्दोलराग इति सम्परिकथ्यतेऽसौ॥",
+      "dhyana_verse_translation": "Outshining the pride of Kamadeva in beauty, seated on a golden flower-decked swing, wide-eyed like blooming lotuses, singing sweet melodies with charming maidens—such is known as Raga Hindol.",
+      "key_iconographic_motifs": [
+        "Lord Krishna or romantic hero seated upon a decorated swing (hindola)",
+        "Swing suspended from flowering Kadamba, mango, or Asoka trees",
+        "Gopis and maidens pushing the ropes decorated with jasmine garlands",
+        "Maidens playing flutes, mridangam drums, and singing festive spring songs",
+        "Yellow flower carpets, blooming spring foliage, splashing colors"
+      ],
+      "color_associations": ["Bright Vasanti yellow", "Fresh leaf green", "Floral white", "Vermilion"]
+    },
+    "Deepak": {
+      "raga_name": "Deepak",
+      "melodic_family": "Deepak family",
+      "time_prahar": "Dusk / Night (Sandhya / Pradosha)",
+      "season": "Summer (Grishma)",
+      "presiding_deity": "Agni (God of Fire) / Sun",
+      "rasa_mood": "Raudra (blazing energy) and Shringara (burning passion)",
+      "dhyana_verse_sanskrit": "प्रदीप्तदीपावलिशोभिताङ्गो विलोलनेत्रः शशिसूर्यतेजाः। प्रियासहायो निशि दीपकोऽयं दीपान् स्वयं प्रज्वलयन् विभाति॥",
+      "dhyana_verse_translation": "Adorned with rows of radiant oil lamps, restless-eyed, glowing with the luminescence of sun and fire, accompanied by his beloved at night, kindling flames by his melody alone—such is the brilliant Deepak Raga.",
+      "key_iconographic_motifs": [
+        "Hero wearing a crown of radiant flames or holding a burning torch/lamp",
+        "Intimate palace chamber illuminated by rows of ornate brass oil lamps (diyas)",
+        "Lovers embracing on an ornate bed under an illuminated canopy",
+        "Candlesticks burning brightly throughout the courtyard",
+        "Flames symbolically bursting forth from torches or candles"
+      ],
+      "color_associations": ["Flame orange", "Fiery gold", "Deep umber", "Glowing yellow light"]
+    },
+    "Megha": {
+      "raga_name": "Megha",
+      "melodic_family": "Megha family",
+      "time_prahar": "Afternoon / Anytime during rain",
+      "season": "Monsoon (Varsha)",
+      "presiding_deity": "Indra / Lord Krishna as cloud-bearer",
+      "rasa_mood": "Adbhuta (wonder) and Shringara (romantic intoxication)",
+      "dhyana_verse_sanskrit": "नीलाम्बुदोत्तुङ्गनिकायशोभो विद्याधरोद्गीतयशोभिरामः। मत्तद्विपः पीतसुवस्त्रधारी मेघाह्वयो रागवरः प्रदिष्टः॥",
+      "dhyana_verse_translation": "Splendid as dark towering rain clouds, celebrated in glorious songs by celestial musicians, riding an intoxicated elephant, clothed in brilliant yellow robes—such is declared the supreme Raga Megha.",
+      "key_iconographic_motifs": [
+        "Dark swirling monsoon clouds (ghana) with zig-zag golden lightning",
+        "Flying cranes (sarasa) forming a white arc against the storm sky",
+        "Peacocks dancing on rooftops and trees with tails fanned out",
+        "Krishna or hero holding a bow or flower sceptre, listening to the thunder",
+        "Lush green meadows revived by raindrops"
+      ],
+      "color_associations": ["Dark indigo storm cloud", "Golden yellow lightning", "Pure white cranes", "Vibrant peacock teal"]
+    },
+    "Sri": {
+      "raga_name": "Sri",
+      "melodic_family": "Sri family",
+      "time_prahar": "Twilight / Dusk (Sandhyakala)",
+      "season": "Winter (Hemanta)",
+      "presiding_deity": "Vishnu / Divine King",
+      "rasa_mood": "Shanta (peaceful serenity) and Shringara (royal elegance)",
+      "dhyana_verse_sanskrit": "अष्टादशाब्दः सुरसुन्दरीभिः संसेव्यमानो मधुराभिलाषी। कर्णे दधानः कलकण्ठपक्षं श्रीराग एष क्षितिपप्रवीरः॥",
+      "dhyana_verse_translation": "A youthful prince of eighteen years, attended by celestial beauties, yearning for sweet melodies, with the feather of a songbird tucked behind his ear—such is Raga Sri, the royal champion.",
+      "key_iconographic_motifs": [
+        "Noble king seated on an elevated golden throne on an open terrace at sunset",
+        "Court musician kneeling before the king playing a Saraswati veena or rudra veena",
+        "Attendants holding peacock feather fans and royal parasol (chhatra)",
+        "Glowing sunset horizon with orange-red hues",
+        "Formal palace balustrade with fountains and flowerbeds"
+      ],
+      "color_associations": ["Imperial gold", "Sunset vermilion", "Royal purple", "Ivory white"]
+    },
+    "Todi": {
+      "raga_name": "Todi",
+      "melodic_family": "Ragini of Dipak or Bhairava",
+      "time_prahar": "Second Prahar of Morning",
+      "season": "Late Autumn",
+      "presiding_deity": "Saraswati aspect / Musical Nayika",
+      "rasa_mood": "Karuna (pathos) and Viraha (separation yearning)",
+      "dhyana_verse_sanskrit": "तुषारकुन्दोज्ज्वलदेहवल्ली काश्मीरकर्पूरविलेपिताङ्गी। विनोदयन्ती हरिणं वनान्ते वीणाधरा राजति तोडिकेयम्॥",
+      "dhyana_verse_translation": "Her slender form radiant as frost and white jasmine, her limbs anointed with saffron and camphor, charming wild deer in the heart of the forest as she plucks her veena—such reigns the enchanting Ragini Todi.",
+      "key_iconographic_motifs": [
+        "Young solitary nayika standing or seated in a wild, rocky landscape",
+        "Holding and playing a stringed rudra veena or tambura",
+        "Wild blackbucks and spotted deer gathered peacefully around her, enchanted by her song",
+        "One deer eating grass or nuzzling close to her hand",
+        "Flowering trees, rocks, and a stream flowing nearby"
+      ],
+      "color_associations": ["Jasmine white", "Saffron yellow", "Forest emerald green", "Golden doe brown"]
+    },
+    "Asavari": {
+      "raga_name": "Asavari",
+      "melodic_family": "Ragini of Megha or Bhairava",
+      "time_prahar": "Morning",
+      "season": "Monsoon / Autumn",
+      "presiding_deity": "Yogini / Tribal ascetic",
+      "rasa_mood": "Vairagya (renunciation) and Karuna (melancholy)",
+      "dhyana_verse_sanskrit": "मलयद्रुमशिखरे मणिविभूषिता सर्पवेष्टिताङ्गी। आसक्ता विरहिणी सा विन्ध्यतटे वसति आसारी रागिणी॥",
+      "dhyana_verse_translation": "Seated on the rocky crag of the Malaya sandal mountain, adorned with forest ornaments, venomous serpents coiled harmlessly about her limbs, an anguished lover separated from her lord—such is Ragini Asavari on the Vindhya slopes.",
+      "key_iconographic_motifs": [
+        "Dark-complexioned yogini or tribal maiden wearing peacock feather skirt or bark garments",
+        "Seated atop a high rock or under a sandalwood tree",
+        "Multiple cobras and serpents entwined around her body, arms, and surrounding boulders",
+        "The serpents are docile, charmed by her sorrowful presence",
+        "Craggy mountain landscape with streams below"
+      ],
+      "color_associations": ["Peacock blue-green", "Earthy charcoal rock", "Sandalwood tan", "Golden serpent scale"]
+    }
+  }
+}
