@@ -1,0 +1,88 @@
+{
+  "total_images_manifest": 564,
+  "total_images_valid": 564,
+  "total_corrupted_or_missing": 0,
+  "color_mode_conversions_to_rgb": 0,
+  "resolution_summary": {
+    "min_width": 71,
+    "max_width": 9378,
+    "mean_width": 1703.8,
+    "min_height": 137,
+    "max_height": 10568,
+    "mean_height": 2030.8
+  },
+  "distributions": {
+    "category": {
+      "Mughal Miniature Paintings": 395,
+      "Painting Crops": 134,
+      "Ragamala Paintings": 35
+    },
+    "school": {
+      "Mughal": 516,
+      "Rajasthani": 46,
+      "Provincial Mughal": 1,
+      "Pahari": 1
+    },
+    "period": {
+      "Akbar Period (c. 1556-1605)": 221,
+      "Unknown": 140,
+      "Classical Mughal (16th-17th Century)": 115,
+      "Late Mughal / 18th Century": 32,
+      "Jahangir Period (c. 1605-1627)": 21,
+      "Shah Jahan Period (c. 1628-1658)": 17,
+      "Aurangzeb Period (c. 1658-1707)": 14,
+      "18th Century": 3,
+      "16th Century": 1
+    },
+    "artist": {
+      "Unknown": 557,
+      "Ustad Mansur": 5,
+      "Bishandas": 1,
+      "Dhanu": 1
+    },
+    "raga": {
+      "None": 514,
+      "Ragamala (Unspecified)": 38,
+      "Shri Raga/Ragini": 9,
+      "Kakubha Raga/Ragini": 1,
+      "Kamod Raga/Ragini": 1,
+      "Saindhavi Raga/Ragini": 1
+    }
+  },
+  "imbalance_analysis": {
+    "category": {
+      "dominant_class": "Mughal Miniature Paintings",
+      "dominant_share": 0.7004,
+      "minority_class": "Ragamala Paintings",
+      "minority_share": 0.0621
+    },
+    "school": {
+      "dominant_class": "Mughal",
+      "dominant_share": 0.9149,
+      "rare_classes": {
+        "Provincial Mughal": 1,
+        "Pahari": 1
+      }
+    },
+    "period": {
+      "dominant_class": "Akbar Period (c. 1556-1605)",
+      "dominant_share": 0.3918,
+      "total_classes": 9
+    },
+    "artist": {
+      "attributed_count": 7,
+      "unknown_count": 557,
+      "unknown_percentage": 98.76
+    },
+    "raga": {
+      "ragamala_count": 50,
+      "distinct_ragas": [
+        "Shri Raga/Ragini",
+        "Kakubha Raga/Ragini",
+        "Kamod Raga/Ragini",
+        "Saindhavi Raga/Ragini"
+      ]
+    }
+  },
+  "corrupted_images": []
+}

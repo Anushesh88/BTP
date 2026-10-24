@@ -1,0 +1,28 @@
+The Mughal and Ragamala paintings in dataset are taken from following sources:
+
+1) Met Museum
+   link: https://www.metmuseum.org
+
+2) British Museum
+   link: https://www.britishmuseum.org/
+
+3) Cleveland Museum of Art
+   link: https://www.clevelandart.org/
+
+4) Victoria and Albert Museum
+   link: https://www.vam.ac.uk/
+
+5) Walters Art Museum
+   link: https://thewalters.org/
+
+6) Open Art Images
+   link: https://openartimages.com/
+
+7) Christie's
+   link: https://www.christies.com/
+
+8) National Museum of Asia Art
+   link: https://asia.si.edu/
+
+9) Minneapolis Institute of Art
+   link: https://new.artsmia.org/

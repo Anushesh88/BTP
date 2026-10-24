@@ -1,0 +1,117 @@
+{
+  "summary": {
+    "total_samples": 564,
+    "train_samples": 395,
+    "train_ratio": 0.7004,
+    "val_samples": 85,
+    "val_ratio": 0.1507,
+    "test_samples": 84,
+    "test_ratio": 0.1489,
+    "train_groups": 216,
+    "val_groups": 60,
+    "test_groups": 65,
+    "group_leakage": false
+  },
+  "distributions": {
+    "category": {
+      "train": {
+        "Mughal Miniature Paintings": 276,
+        "Painting Crops": 94,
+        "Ragamala Paintings": 25
+      },
+      "val": {
+        "Mughal Miniature Paintings": 61,
+        "Painting Crops": 19,
+        "Ragamala Paintings": 5
+      },
+      "test": {
+        "Mughal Miniature Paintings": 58,
+        "Painting Crops": 21,
+        "Ragamala Paintings": 5
+      }
+    },
+    "school": {
+      "train": {
+        "Mughal": 356,
+        "Rajasthani": 39
+      },
+      "val": {
+        "Mughal": 82,
+        "Rajasthani": 3
+      },
+      "test": {
+        "Mughal": 78,
+        "Rajasthani": 4,
+        "Provincial Mughal": 1,
+        "Pahari": 1
+      }
+    },
+    "period": {
+      "train": {
+        "Akbar Period (c. 1556-1605)": 193,
+        "Classical Mughal (16th-17th Century)": 77,
+        "Jahangir Period (c. 1605-1627)": 12,
+        "Unknown": 82,
+        "Late Mughal / 18th Century": 14,
+        "Shah Jahan Period (c. 1628-1658)": 8,
+        "Aurangzeb Period (c. 1658-1707)": 9
+      },
+      "val": {
+        "Akbar Period (c. 1556-1605)": 12,
+        "Classical Mughal (16th-17th Century)": 19,
+        "Shah Jahan Period (c. 1628-1658)": 3,
+        "Unknown": 33,
+        "Aurangzeb Period (c. 1658-1707)": 1,
+        "Jahangir Period (c. 1605-1627)": 4,
+        "18th Century": 1,
+        "Late Mughal / 18th Century": 12
+      },
+      "test": {
+        "Unknown": 25,
+        "Classical Mughal (16th-17th Century)": 19,
+        "Akbar Period (c. 1556-1605)": 16,
+        "Late Mughal / 18th Century": 6,
+        "Shah Jahan Period (c. 1628-1658)": 6,
+        "Aurangzeb Period (c. 1658-1707)": 4,
+        "Jahangir Period (c. 1605-1627)": 5,
+        "16th Century": 1,
+        "18th Century": 2
+      }
+    },
+    "artist": {
+      "train": {
+        "Unknown": 391,
+        "Ustad Mansur": 4
+      },
+      "val": {
+        "Unknown": 85
+      },
+      "test": {
+        "Unknown": 81,
+        "Bishandas": 1,
+        "Dhanu": 1,
+        "Ustad Mansur": 1
+      }
+    },
+    "raga": {
+      "train": {
+        "None": 355,
+        "Saindhavi Raga/Ragini": 1,
+        "Ragamala (Unspecified)": 31,
+        "Kamod Raga/Ragini": 1,
+        "Shri Raga/Ragini": 6,
+        "Kakubha Raga/Ragini": 1
+      },
+      "val": {
+        "None": 80,
+        "Ragamala (Unspecified)": 3,
+        "Shri Raga/Ragini": 2
+      },
+      "test": {
+        "None": 79,
+        "Shri Raga/Ragini": 1,
+        "Ragamala (Unspecified)": 4
+      }
+    }
+  }
+}
