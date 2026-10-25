@@ -109,6 +109,23 @@ def test_vlm_schema_and_label_options():
     print("  [PASS] test_vlm_schema_and_label_options")
 
 
+def test_ood_gate_rejects_photo_and_accepts_painting():
+    if not (Path("data/cache/embeddings_train_vit_b_16.npz").exists() and Path("data/metadata/test_split.jsonl").exists()):
+        print("  [SKIP] test_ood_gate_rejects_photo_and_accepts_painting (no cached embeddings / splits)")
+        return
+    import skimage.data
+    from PIL import Image
+    from src.ood import MiniatureGate
+
+    gate = MiniatureGate()
+    cat = gate.check(Image.fromarray(skimage.data.chelsea()))
+    assert not cat.is_miniature, f"Cat photo should be rejected: {cat}"
+    painting = pd.read_json("data/metadata/test_split.jsonl", lines=True).file_path.iloc[0]
+    res = gate.check(painting)
+    assert res.is_miniature, f"Held-out painting should pass the gate: {res}"
+    print("  [PASS] test_ood_gate_rejects_photo_and_accepts_painting")
+
+
 if __name__ == "__main__":
     print("Running Phase 10 / Real-Data Plumbing Test Suite...")
     tests = [
@@ -117,6 +134,7 @@ if __name__ == "__main__":
         test_missing_labels_are_masked_in_training,
         test_feedback_store_applies_latest_correction,
         test_vlm_schema_and_label_options,
+        test_ood_gate_rejects_photo_and_accepts_painting,
     ]
     passed = failed = 0
     for t in tests:

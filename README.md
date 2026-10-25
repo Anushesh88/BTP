@@ -22,6 +22,19 @@ python tests/test_phase10_feedback_eval.py   # each tests/*.py file runs standal
 
 Start with `reports/final_evaluation_report.md`.
 
+## Predict one image
+
+```bash
+python predict.py path/to/painting.jpg
+```
+
+Images that are not Indian miniature paintings (photos, documents, other art) are **rejected**
+by a gate (`src/ood.py`) instead of being forced into a Mughal/Rajasthani/Pahari label. The
+classifier heads are closed-set, so without the gate a dog photo comes out "Mughal" with high
+confidence. The gate needs both checks to pass: similarity to the 5 nearest training paintings
+≥ 0.25 and CLIP "miniature painting" probability ≥ 0.50. All 169 val/test paintings pass; all
+12 scikit-image sample photos fail. `--skip_gate` forces a (meaningless) prediction.
+
 ## Layout
 
 | Path | Contents |
