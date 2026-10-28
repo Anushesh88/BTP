@@ -1,66 +1,64 @@
 # Phase 10: Final Evaluation, Error Analysis & Feedback Loop
 
-> Held-out test split: 84 paintings from manuscript groups never seen in training. Final model = Phase 7 multi-head classifier on fused features with Phase 8 temperature scaling.
+> Held-out test split: 85 paintings from manuscript groups never seen in training. Final model = Phase 7 multi-head classifier on fused features with Phase 8 temperature scaling.
 
 ## 10.1 Quantitative Assessment
 
 | Head | Test N | Majority-class Acc | Baseline Acc | Final Acc | Final Macro F1 | Baseline Macro F1 | Majority Macro F1 | vs 85% target |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Raga | 84 | 94.0% | 94.0% | 90.5% | 0.463 | 0.394 | 0.323 | meets target |
-| School | 84 | 94.0% | 94.0% | 90.5% | 0.485 | 0.530 | 0.323 | meets target |
-| Period | 59 | 27.1% | 61.0% | 66.1% | 0.462 | 0.441 | 0.071 | below target |
-| Artist | 84 | 96.4% | 96.4% | 96.4% | 0.245 | 0.245 | 0.245 | insufficient labels |
+| Raga | 85 | 89.4% | 92.9% | 85.9% | 0.336 | 0.547 | 0.236 | meets target |
+| School | 85 | 90.6% | 94.1% | 88.2% | 0.757 | 0.837 | 0.475 | meets target |
+| Period | 46 | 50.0% | 60.9% | 63.0% | 0.385 | 0.369 | 0.133 | below target |
+| Artist | 85 | 98.8% | 98.8% | 98.8% | 0.497 | 0.497 | 0.497 | insufficient labels |
 
 **Reading this table**: *Majority-class* always predicts the most common training label. Accuracy alone is misleading on this dataset because labels are heavily imbalanced (e.g. ~90% of test paintings are 'Mughal' and ~90% 'Non-Ragamala'), so Macro F1 against the majority floor is the honest measure.
 
 ### Target check (85% – 90%)
-- **School**: final accuracy 90.5% (majority floor 94.0%, baseline 94.0%); macro F1 0.485 vs floor 0.323. 1 test label(s) belong to classes absent from training.
-- **Period**: final accuracy 66.1% (majority floor 27.1%, baseline 61.0%); macro F1 0.462 vs floor 0.071.
-- **Raga**: final accuracy 90.5% (majority floor 94.0%, baseline 94.0%); macro F1 0.463 vs floor 0.323.
-- **Artist**: not assessed against the target — only 4 attributed paintings in training.
+- **School**: final accuracy 88.2% (majority floor 90.6%, baseline 94.1%); macro F1 0.757 vs floor 0.475.
+- **Period**: final accuracy 63.0% (majority floor 50.0%, baseline 60.9%); macro F1 0.385 vs floor 0.133.
+- **Raga**: final accuracy 85.9% (majority floor 89.4%, baseline 92.9%); macro F1 0.336 vs floor 0.236.
+- **Artist**: not assessed against the target — only 5 attributed paintings in training.
 
 ### Per-class F1
 
 | Head | Class | Precision | Recall | F1 | Support |
 | --- | --- | --- | --- | --- | --- |
-| raga | Non-Ragamala | 1.00 | 0.92 | 0.96 | 79 |
-| raga | Ragamala (Unspecified) | 0.30 | 0.75 | 0.43 | 4 |
-| raga | Shri Raga/Ragini | 0.00 | 0.00 | 0.00 | 1 |
-| school | Mughal | 1.00 | 0.91 | 0.95 | 79 |
-| school | Pahari | 0.00 | 0.00 | 0.00 | 1 |
-| school | Rajasthani | 0.33 | 1.00 | 0.50 | 4 |
-| period | Akbar Period (c. 1556-1605) | 1.00 | 0.69 | 0.81 | 16 |
-| period | Aurangzeb Period (c. 1658-1707) | 0.22 | 0.50 | 0.31 | 4 |
-| period | Classical Mughal (16th-17th Century) | 0.87 | 1.00 | 0.93 | 20 |
-| period | Jahangir Period (c. 1605-1627) | 0.25 | 0.20 | 0.22 | 5 |
-| period | Late Mughal / 18th Century | 0.42 | 0.62 | 0.50 | 8 |
-| period | Shah Jahan Period (c. 1628-1658) | 0.00 | 0.00 | 0.00 | 6 |
-| artist | Bishandas | 0.00 | 0.00 | 0.00 | 1 |
-| artist | Dhanu | 0.00 | 0.00 | 0.00 | 1 |
-| artist | Unknown | 0.96 | 1.00 | 0.98 | 81 |
+| raga | Non-Ragamala | 0.99 | 0.91 | 0.95 | 76 |
+| raga | Ragamala (Other) | 0.00 | 0.00 | 0.00 | 2 |
+| raga | Ragamala (Unspecified) | 0.27 | 0.80 | 0.40 | 5 |
+| raga | Shri Raga/Ragini | 0.00 | 0.00 | 0.00 | 2 |
+| school | Mughal | 0.99 | 0.88 | 0.93 | 77 |
+| school | Rajasthani | 0.44 | 0.88 | 0.58 | 8 |
+| period | Akbar Period (c. 1556-1605) | 0.79 | 0.83 | 0.81 | 23 |
+| period | Aurangzeb Period (c. 1658-1707) | 0.00 | 0.00 | 0.00 | 4 |
+| period | Classical Mughal (16th-17th Century) | 0.00 | 0.00 | 0.00 | 0 |
+| period | Jahangir Period (c. 1605-1627) | 0.50 | 0.14 | 0.22 | 7 |
+| period | Late Mughal / 18th Century | 0.78 | 0.78 | 0.78 | 9 |
+| period | Shah Jahan Period (c. 1628-1658) | 0.40 | 0.67 | 0.50 | 3 |
+| artist | Unknown | 0.99 | 1.00 | 0.99 | 84 |
 | artist | Ustad Mansur | 0.00 | 0.00 | 0.00 | 1 |
 
 ## 10.2 Error Analysis
 
 ### Calibration check: does 70% confidence mean ~70% precision?
-- Predictions with confidence in [0.6, 0.8): n=19, mean confidence 73.6%, observed precision 68.4%.
-- Predictions with confidence ≥ 0.7: n=180, observed precision 94.4%.
+- Predictions with confidence in [0.6, 0.8): n=27, mean confidence 72.6%, observed precision 63.0%.
+- Predictions with confidence ≥ 0.7: n=171, observed precision 90.6%.
 - Pooled over the raga, school and period heads after temperature scaling.
 
 ### Most frequent confusions (test split)
 
 | head | true | predicted | count |
 | --- | --- | --- | --- |
-| school | Mughal | Rajasthani | 7 |
-| raga | Non-Ragamala | Ragamala (Unspecified) | 6 |
-| period | Shah Jahan Period (c. 1628-1658) | Aurangzeb Period (c. 1658-1707) | 4 |
-| period | Aurangzeb Period (c. 1658-1707) | Late Mughal / 18th Century | 2 |
-| period | Shah Jahan Period (c. 1628-1658) | Late Mughal / 18th Century | 2 |
-| period | Akbar Period (c. 1556-1605) | Jahangir Period (c. 1605-1627) | 2 |
+| school | Mughal | Rajasthani | 9 |
+| raga | Non-Ragamala | Ragamala (Unspecified) | 7 |
+| period | Akbar Period (c. 1556-1605) | Classical Mughal (16th-17th Century) | 3 |
+| raga | Ragamala (Other) | Ragamala (Unspecified) | 2 |
+| period | Jahangir Period (c. 1605-1627) | Akbar Period (c. 1556-1605) | 2 |
+| period | Aurangzeb Period (c. 1658-1707) | Shah Jahan Period (c. 1628-1658) | 2 |
 | period | Jahangir Period (c. 1605-1627) | Late Mughal / 18th Century | 2 |
-| period | Akbar Period (c. 1556-1605) | Aurangzeb Period (c. 1658-1707) | 1 |
-| period | Akbar Period (c. 1556-1605) | Classical Mughal (16th-17th Century) | 1 |
-| period | Akbar Period (c. 1556-1605) | Late Mughal / 18th Century | 1 |
+| raga | Shri Raga/Ragini | Ragamala (Unspecified) | 2 |
+| period | Akbar Period (c. 1556-1605) | Jahangir Period (c. 1605-1627) | 1 |
+| period | Aurangzeb Period (c. 1658-1707) | Classical Mughal (16th-17th Century) | 1 |
 
 ### Artifacts
 - Most-confident misclassifications: [`error_analysis/misclassified_test_samples.csv`](error_analysis/misclassified_test_samples.csv)

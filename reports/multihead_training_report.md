@@ -6,10 +6,10 @@
 
 | Target Head | Phase 3 Baseline Acc | Phase 7 Fused Acc | Accuracy Delta | Phase 7 F1 (Weighted) |
 | --- | --- | --- | --- | --- |
-| Raga | 94.0% | 90.5% | -3.6% | 0.9238 |
-| School | 94.0% | 90.5% | -3.6% | 0.9207 |
-| Period | 61.0% | 66.1% | +5.1% | 0.6438 |
-| Artist | 96.4% | 96.4% | +0.0% | 0.9468 |
+| Raga | 92.9% | 85.9% | -7.1% | 0.8687 |
+| School | 94.1% | 88.2% | -5.9% | 0.8987 |
+| Period | 60.9% | 63.0% | +2.2% | 0.6229 |
+| Artist | 98.8% | 98.8% | +0.0% | 0.9824 |
 
 ## Progress Toward Target Goal (85% - 90%)
 - **Target Benchmark**: 85.00% – 90.00% across primary heads (*Raga*, *School*, *Period*).

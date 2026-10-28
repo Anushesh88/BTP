@@ -6,10 +6,10 @@
 
 | Target Head | Optimal Temp (T) | ECE Before | ECE After (Calibrated) | ECE Improvement | Brier Score Pre | Brier Score Post |
 | --- | --- | --- | --- | --- | --- | --- |
-| Raga | 0.828 | 6.27% | 8.44% | +2.17% | 0.1299 | 0.1321 |
-| School | 1.518 | 6.93% | 4.87% | 2.07% | 0.1388 | 0.1248 |
-| Period | 0.861 | 10.88% | 9.75% | 1.13% | 0.4338 | 0.4223 |
-| Artist | 0.054 | 1.16% | 3.57% | +2.41% | 0.0437 | 0.0476 |
+| Raga | 0.715 | 4.08% | 4.95% | +0.87% | 0.1915 | 0.1964 |
+| School | 1.327 | 7.34% | 4.65% | 2.69% | 0.1864 | 0.1788 |
+| Period | 0.969 | 20.42% | 19.34% | 1.08% | 0.5835 | 0.5824 |
+| Artist | 0.114 | 8.00% | 1.18% | 6.82% | 0.0358 | 0.0235 |
 
 ## Domain & Methodological Insights
 - **Empirical Alignment**: Temperature scaling softens overconfident logits without changing top-1 class rankings (argmax is invariant).

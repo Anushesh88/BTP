@@ -1,0 +1,49 @@
+{
+  "series_merges": {
+    "series_akbarnama": 1,
+    "album_late_shah_jahan": 5,
+    "album_prince_salim": 1,
+    "album_prince_khurram": 1,
+    "album_teheranberlin": 1,
+    "ms_cma_tutinama": 7,
+    "album_amber": 1
+  },
+  "collection_merges": {
+    "coll_mughal_style_detail_studies": 116
+  },
+  "near_duplicate_pairs": [
+    {
+      "a": "FS-8106_08",
+      "b": "image-from-rawpixel-id-8846131-original",
+      "cosine": 1.0
+    },
+    {
+      "a": "FS-F1907.582_001",
+      "b": "image-from-rawpixel-id-8846601-original",
+      "cosine": 0.902
+    },
+    {
+      "a": "harem_night-bathing_scene_from_the_late_shah_jahan_album_recto_c_1653",
+      "b": "leaf_from_the_late_shah_jahan_album_harem_night-bathing_scene_recto_calligraphy_framed_by_an_ornamental_border_of_flower_c_1650",
+      "cosine": 0.929
+    },
+    {
+      "a": "the_siege_of_arbela_in_the_era_of_hulagu_khan_from_a_chingiz-nama_book_of_chingiz_khan_of_the_jami_al-tavarikh_compendiu_c_1596",
+      "b": "the_siege_of_arbela_in_the_era_of_hulagu_khan_page_from_a_chingiz-nama_book_of_chingiz_khan_of_the_jami_al-tavarikh_comp_c_1596",
+      "cosine": 1.0
+    }
+  ],
+  "exact_duplicates_removed": [
+    {
+      "kept": "FS-8106_08",
+      "removed": "image-from-rawpixel-id-8846131-original"
+    },
+    {
+      "kept": "the_siege_of_arbela_in_the_era_of_hulagu_khan_from_a_chingiz-nama_book_of_chingiz_khan_of_the_jami_al-tavarikh_compendiu_c_1596",
+      "removed": "the_siege_of_arbela_in_the_era_of_hulagu_khan_page_from_a_chingiz-nama_book_of_chingiz_khan_of_the_jami_al-tavarikh_comp_c_1596"
+    }
+  ],
+  "groups_before": 341,
+  "groups_after": 211,
+  "paintings_regrouped": 150
+}

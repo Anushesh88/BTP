@@ -3,8 +3,12 @@ Comprehensive Verification Tests for Phase 1 & Phase 2
 """
 
 import json
+import sys
 from pathlib import Path
 import pandas as pd
+
+# Add project root to sys.path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 def test_directories_exist():
     base = Path("data")
@@ -63,10 +67,28 @@ def test_leak_free_disjoint_splits():
     with open(test_path, "r", encoding="utf-8") as f:
         test_data = [json.loads(line) for line in f]
 
-    assert len(train_data) + len(val_data) + len(test_data) == 564, "Total split counts do not equal 564"
-    assert abs(len(train_data) / 564 - 0.70) < 0.02, f"Train split not ~70%: {len(train_data)}"
-    assert abs(len(val_data) / 564 - 0.15) < 0.02, f"Val split not ~15%: {len(val_data)}"
-    assert abs(len(test_data) / 564 - 0.15) < 0.02, f"Test split not ~15%: {len(test_data)}"
+    # Exact duplicate images are dropped during group refinement (src/group_refinement.py)
+    refinement_file = meta_dir / "group_refinement_report.json"
+    removed = 0
+    if refinement_file.exists():
+        with open(refinement_file, "r", encoding="utf-8") as f:
+            removed = len(json.load(f)["exact_duplicates_removed"])
+    total = 564 - removed
+    assert len(train_data) + len(val_data) + len(test_data) == total, f"Total split counts do not equal {total}"
+    assert abs(len(train_data) / total - 0.70) < 0.02, f"Train split not ~70%: {len(train_data)}"
+    assert abs(len(val_data) / total - 0.15) < 0.02, f"Val split not ~15%: {len(val_data)}"
+    assert abs(len(test_data) / total - 0.15) < 0.02, f"Test split not ~15%: {len(test_data)}"
+
+    # No named manuscript / album may span two splits
+    from src.group_refinement import series_key
+    split_of_series = {}
+    for split_name, items in (("train", train_data), ("val", val_data), ("test", test_data)):
+        for x in items:
+            s = series_key(x)
+            if s:
+                split_of_series.setdefault(s, set()).add(split_name)
+    spanning = {s: v for s, v in split_of_series.items() if len(v) > 1}
+    assert not spanning, f"Manuscript/album split across sets: {spanning}"
 
     # Check for ZERO duplicate images
     train_ids = set(x['image_id'] for x in train_data)

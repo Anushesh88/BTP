@@ -51,7 +51,12 @@ def classifier_candidates(args, eval_df: pd.DataFrame):
         X, _ = fusion.extract_dataset_fused_features(
             df=eval_df,
             motifs_manifest_path=args.motifs_manifest,
-            cache_file=Path(args.cache_dir) / "fused_test_vit_b_16.npz",
+            # A subset (--image_ids_file / --num_eval_samples) gets its own cache so it never
+            # overwrites the full test-split cache that Phases 7, 8 and 10 rely on
+            cache_file=Path(args.cache_dir) / (
+                "fused_test_vit_b_16.npz" if len(eval_df) == args.full_test_size
+                else f"fused_vlm_subset_{len(eval_df)}_vit_b_16.npz"
+            ),
         )
         with torch.no_grad():
             logits = trainer.model(torch.tensor(X, dtype=torch.float32).to(trainer.device))
@@ -130,6 +135,7 @@ def main():
 
     # 2. Classifier candidates
     logger.info("=== STEP 2: Computing Classifier Top-3 Candidates ===")
+    args.full_test_size = len(test_df)
     clf_top3_by_image, label_options, clf_source = classifier_candidates(args, eval_df)
     logger.info(f"Classifier candidates from: {clf_source}")
     motifs_by_image = load_motifs(args.motifs_manifest)

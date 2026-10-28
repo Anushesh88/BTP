@@ -1,30 +1,146 @@
-2026-10-21 12:07:16,626 [INFO] === STEP 1: Ingesting Manifest & Creating Leak-Free Grouped Splits ===
-2026-10-21 12:07:16,727 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
-2026-10-21 12:07:16,727 [INFO] === STEP 2: Extracting Dual-Branch Fused Features for Train/Val/Test ===
-2026-10-21 12:07:16,745 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
-2026-10-21 12:07:17,500 [INFO] Frozen backbone initialized. Feature dimension: 768
-2026-10-21 12:07:17,881 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
-2026-10-21 12:07:17,882 [INFO] Loading cached fused features from: data\cache\fused_train_vit_b_16.npz
-2026-10-21 12:07:17,897 [INFO] Loading cached fused features from: data\cache\fused_val_vit_b_16.npz
-2026-10-21 12:07:17,902 [INFO] Loading cached fused features from: data\cache\fused_test_vit_b_16.npz
-2026-10-21 12:07:17,905 [INFO] Fused Feature Dimension: 1632 (Train: 395, Val: 85, Test: 84)
-2026-10-21 12:07:17,905 [INFO] === STEP 3: Training Multi-Head Neural Classifier ===
-2026-10-21 12:07:17,907 [INFO] Target 'raga': 4 classes. Balanced weights computed.
-2026-10-21 12:07:17,908 [INFO] Target 'school': 2 classes. Balanced weights computed.
-2026-10-21 12:07:17,909 [INFO] Target 'period': 6 classes. Balanced weights computed.
-2026-10-21 12:07:17,909 [INFO] Target 'artist': 2 classes. Balanced weights computed.
-2026-10-21 12:07:17,919 [INFO] Starting Multi-Head training for 100 epochs on device: cuda
-2026-10-21 12:07:18,760 [INFO] Epoch [05/100] Train Loss: 2.4343 | Val Loss: 2.9862 | Val Acc: 88.86%
-2026-10-21 12:07:19,424 [INFO] Epoch [10/100] Train Loss: 1.4659 | Val Loss: 3.2560 | Val Acc: 88.86%
-2026-10-21 12:07:20,018 [INFO] Epoch [15/100] Train Loss: 0.8528 | Val Loss: 3.3171 | Val Acc: 90.62%
-2026-10-21 12:07:20,561 [INFO] Early stopping triggered at epoch 19. Best Val Loss: 2.8018
-2026-10-21 12:07:20,562 [INFO] Multi-Head model training complete.
-2026-10-21 12:07:20,610 [INFO] Multi-Head checkpoint saved to: models\multihead_fused_classifier.pt
-2026-10-21 12:07:20,610 [INFO] === STEP 4: Evaluating Multi-Head Classifier on Test Split ===
-2026-10-21 12:07:21,211 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_raga.png
-2026-10-21 12:07:21,403 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_school.png
-2026-10-21 12:07:21,645 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_period.png
-2026-10-21 12:07:21,828 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_artist.png
-2026-10-21 12:07:21,830 [INFO] Saved benchmark metrics to reports\multihead_benchmark.json
-2026-10-21 12:07:21,832 [INFO] Saved benchmark markdown report to reports\multihead_benchmark.md
-2026-10-21 12:07:21,834 [INFO] Phase 7 Report generated at: reports\multihead_training_report.md
+2026-10-28 17:28:13,108 [INFO] === STEP 1: Ingesting Manifest & Creating Leak-Free Grouped Splits ===
+2026-10-28 17:28:13,608 [INFO] Loaded frozen splits from data\metadata: Train=393, Val=84, Test=85
+2026-10-28 17:28:13,608 [INFO] === STEP 2: Extracting Dual-Branch Fused Features for Train/Val/Test ===
+2026-10-28 17:28:13,648 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-28 17:28:15,848 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-28 17:28:16,787 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-28 17:28:19,029 [INFO] Extracting dual-branch fused features on 393 paintings...
+2026-10-28 17:28:22,515 [INFO] Extracted [5/393] paintings (fused dim: 1632).
+2026-10-28 17:28:23,939 [INFO] Extracted [10/393] paintings (fused dim: 1632).
+2026-10-28 17:28:25,901 [INFO] Extracted [15/393] paintings (fused dim: 1632).
+2026-10-28 17:28:27,501 [INFO] Extracted [20/393] paintings (fused dim: 1632).
+2026-10-28 17:28:28,850 [INFO] Extracted [25/393] paintings (fused dim: 1632).
+2026-10-28 17:28:30,641 [INFO] Extracted [30/393] paintings (fused dim: 1632).
+2026-10-28 17:28:32,204 [INFO] Extracted [35/393] paintings (fused dim: 1632).
+2026-10-28 17:28:33,936 [INFO] Extracted [40/393] paintings (fused dim: 1632).
+2026-10-28 17:28:35,649 [INFO] Extracted [45/393] paintings (fused dim: 1632).
+2026-10-28 17:28:37,201 [INFO] Extracted [50/393] paintings (fused dim: 1632).
+2026-10-28 17:28:39,057 [INFO] Extracted [55/393] paintings (fused dim: 1632).
+2026-10-28 17:28:40,906 [INFO] Extracted [60/393] paintings (fused dim: 1632).
+2026-10-28 17:28:42,855 [INFO] Extracted [65/393] paintings (fused dim: 1632).
+2026-10-28 17:28:44,442 [INFO] Extracted [70/393] paintings (fused dim: 1632).
+2026-10-28 17:28:45,865 [INFO] Extracted [75/393] paintings (fused dim: 1632).
+2026-10-28 17:28:47,744 [INFO] Extracted [80/393] paintings (fused dim: 1632).
+2026-10-28 17:28:49,706 [INFO] Extracted [85/393] paintings (fused dim: 1632).
+2026-10-28 17:28:51,555 [INFO] Extracted [90/393] paintings (fused dim: 1632).
+2026-10-28 17:28:53,424 [INFO] Extracted [95/393] paintings (fused dim: 1632).
+2026-10-28 17:28:55,264 [INFO] Extracted [100/393] paintings (fused dim: 1632).
+2026-10-28 17:28:56,659 [INFO] Extracted [105/393] paintings (fused dim: 1632).
+2026-10-28 17:28:58,540 [INFO] Extracted [110/393] paintings (fused dim: 1632).
+2026-10-28 17:29:00,434 [INFO] Extracted [115/393] paintings (fused dim: 1632).
+2026-10-28 17:29:04,095 [INFO] Extracted [120/393] paintings (fused dim: 1632).
+2026-10-28 17:29:09,168 [INFO] Extracted [125/393] paintings (fused dim: 1632).
+2026-10-28 17:29:13,621 [INFO] Extracted [130/393] paintings (fused dim: 1632).
+2026-10-28 17:29:17,971 [INFO] Extracted [135/393] paintings (fused dim: 1632).
+2026-10-28 17:29:22,310 [INFO] Extracted [140/393] paintings (fused dim: 1632).
+2026-10-28 17:29:26,766 [INFO] Extracted [145/393] paintings (fused dim: 1632).
+2026-10-28 17:29:31,383 [INFO] Extracted [150/393] paintings (fused dim: 1632).
+2026-10-28 17:29:36,021 [INFO] Extracted [155/393] paintings (fused dim: 1632).
+2026-10-28 17:29:40,096 [INFO] Extracted [160/393] paintings (fused dim: 1632).
+2026-10-28 17:29:44,817 [INFO] Extracted [165/393] paintings (fused dim: 1632).
+2026-10-28 17:29:49,252 [INFO] Extracted [170/393] paintings (fused dim: 1632).
+2026-10-28 17:29:53,575 [INFO] Extracted [175/393] paintings (fused dim: 1632).
+2026-10-28 17:29:58,358 [INFO] Extracted [180/393] paintings (fused dim: 1632).
+2026-10-28 17:30:02,299 [INFO] Extracted [185/393] paintings (fused dim: 1632).
+2026-10-28 17:30:06,738 [INFO] Extracted [190/393] paintings (fused dim: 1632).
+2026-10-28 17:30:11,640 [INFO] Extracted [195/393] paintings (fused dim: 1632).
+2026-10-28 17:30:16,107 [INFO] Extracted [200/393] paintings (fused dim: 1632).
+2026-10-28 17:30:20,929 [INFO] Extracted [205/393] paintings (fused dim: 1632).
+2026-10-28 17:30:25,514 [INFO] Extracted [210/393] paintings (fused dim: 1632).
+2026-10-28 17:30:29,742 [INFO] Extracted [215/393] paintings (fused dim: 1632).
+2026-10-28 17:30:34,631 [INFO] Extracted [220/393] paintings (fused dim: 1632).
+2026-10-28 17:30:39,313 [INFO] Extracted [225/393] paintings (fused dim: 1632).
+2026-10-28 17:30:43,852 [INFO] Extracted [230/393] paintings (fused dim: 1632).
+2026-10-28 17:30:48,709 [INFO] Extracted [235/393] paintings (fused dim: 1632).
+2026-10-28 17:30:54,419 [INFO] Extracted [240/393] paintings (fused dim: 1632).
+2026-10-28 17:30:59,150 [INFO] Extracted [245/393] paintings (fused dim: 1632).
+2026-10-28 17:31:04,275 [INFO] Extracted [250/393] paintings (fused dim: 1632).
+2026-10-28 17:31:09,157 [INFO] Extracted [255/393] paintings (fused dim: 1632).
+2026-10-28 17:31:13,287 [INFO] Extracted [260/393] paintings (fused dim: 1632).
+2026-10-28 17:31:17,870 [INFO] Extracted [265/393] paintings (fused dim: 1632).
+2026-10-28 17:31:22,293 [INFO] Extracted [270/393] paintings (fused dim: 1632).
+2026-10-28 17:31:26,854 [INFO] Extracted [275/393] paintings (fused dim: 1632).
+2026-10-28 17:31:30,360 [INFO] Extracted [280/393] paintings (fused dim: 1632).
+2026-10-28 17:31:33,838 [INFO] Extracted [285/393] paintings (fused dim: 1632).
+2026-10-28 17:31:36,701 [INFO] Extracted [290/393] paintings (fused dim: 1632).
+2026-10-28 17:31:40,014 [INFO] Extracted [295/393] paintings (fused dim: 1632).
+2026-10-28 17:31:46,753 [INFO] Extracted [300/393] paintings (fused dim: 1632).
+2026-10-28 17:31:55,204 [INFO] Extracted [305/393] paintings (fused dim: 1632).
+2026-10-28 17:32:05,416 [INFO] Extracted [310/393] paintings (fused dim: 1632).
+2026-10-28 17:32:10,380 [INFO] Extracted [315/393] paintings (fused dim: 1632).
+2026-10-28 17:32:13,786 [INFO] Extracted [320/393] paintings (fused dim: 1632).
+2026-10-28 17:32:16,556 [INFO] Extracted [325/393] paintings (fused dim: 1632).
+2026-10-28 17:32:21,882 [INFO] Extracted [330/393] paintings (fused dim: 1632).
+2026-10-28 17:32:26,172 [INFO] Extracted [335/393] paintings (fused dim: 1632).
+2026-10-28 17:32:29,913 [INFO] Extracted [340/393] paintings (fused dim: 1632).
+2026-10-28 17:32:33,659 [INFO] Extracted [345/393] paintings (fused dim: 1632).
+2026-10-28 17:32:37,140 [INFO] Extracted [350/393] paintings (fused dim: 1632).
+2026-10-28 17:32:40,134 [INFO] Extracted [355/393] paintings (fused dim: 1632).
+2026-10-28 17:32:43,295 [INFO] Extracted [360/393] paintings (fused dim: 1632).
+2026-10-28 17:32:47,454 [INFO] Extracted [365/393] paintings (fused dim: 1632).
+2026-10-28 17:32:51,590 [INFO] Extracted [370/393] paintings (fused dim: 1632).
+2026-10-28 17:32:55,433 [INFO] Extracted [375/393] paintings (fused dim: 1632).
+2026-10-28 17:32:58,983 [INFO] Extracted [380/393] paintings (fused dim: 1632).
+2026-10-28 17:33:02,241 [INFO] Extracted [385/393] paintings (fused dim: 1632).
+2026-10-28 17:33:06,279 [INFO] Extracted [390/393] paintings (fused dim: 1632).
+2026-10-28 17:33:08,734 [INFO] Extracted [393/393] paintings (fused dim: 1632).
+2026-10-28 17:33:08,988 [INFO] Saved fused feature matrix of shape (393, 1632) to data\cache\fused_train_vit_b_16.npz
+2026-10-28 17:33:10,276 [INFO] Extracting dual-branch fused features on 84 paintings...
+2026-10-28 17:33:14,198 [INFO] Extracted [5/84] paintings (fused dim: 1632).
+2026-10-28 17:33:18,221 [INFO] Extracted [10/84] paintings (fused dim: 1632).
+2026-10-28 17:33:22,071 [INFO] Extracted [15/84] paintings (fused dim: 1632).
+2026-10-28 17:33:26,161 [INFO] Extracted [20/84] paintings (fused dim: 1632).
+2026-10-28 17:33:30,347 [INFO] Extracted [25/84] paintings (fused dim: 1632).
+2026-10-28 17:33:34,089 [INFO] Extracted [30/84] paintings (fused dim: 1632).
+2026-10-28 17:33:37,788 [INFO] Extracted [35/84] paintings (fused dim: 1632).
+2026-10-28 17:33:41,170 [INFO] Extracted [40/84] paintings (fused dim: 1632).
+2026-10-28 17:33:44,704 [INFO] Extracted [45/84] paintings (fused dim: 1632).
+2026-10-28 17:33:47,889 [INFO] Extracted [50/84] paintings (fused dim: 1632).
+2026-10-28 17:33:51,512 [INFO] Extracted [55/84] paintings (fused dim: 1632).
+2026-10-28 17:33:57,639 [INFO] Extracted [60/84] paintings (fused dim: 1632).
+2026-10-28 17:34:01,598 [INFO] Extracted [65/84] paintings (fused dim: 1632).
+2026-10-28 17:34:05,530 [INFO] Extracted [70/84] paintings (fused dim: 1632).
+2026-10-28 17:34:11,637 [INFO] Extracted [75/84] paintings (fused dim: 1632).
+2026-10-28 17:34:16,055 [INFO] Extracted [80/84] paintings (fused dim: 1632).
+2026-10-28 17:34:18,789 [INFO] Extracted [84/84] paintings (fused dim: 1632).
+2026-10-28 17:34:18,833 [INFO] Saved fused feature matrix of shape (84, 1632) to data\cache\fused_val_vit_b_16.npz
+2026-10-28 17:34:19,831 [INFO] Extracting dual-branch fused features on 85 paintings...
+2026-10-28 17:34:23,147 [INFO] Extracted [5/85] paintings (fused dim: 1632).
+2026-10-28 17:34:27,781 [INFO] Extracted [10/85] paintings (fused dim: 1632).
+2026-10-28 17:34:32,499 [INFO] Extracted [15/85] paintings (fused dim: 1632).
+2026-10-28 17:34:36,887 [INFO] Extracted [20/85] paintings (fused dim: 1632).
+2026-10-28 17:34:41,277 [INFO] Extracted [25/85] paintings (fused dim: 1632).
+2026-10-28 17:34:44,867 [INFO] Extracted [30/85] paintings (fused dim: 1632).
+2026-10-28 17:34:48,921 [INFO] Extracted [35/85] paintings (fused dim: 1632).
+2026-10-28 17:34:53,237 [INFO] Extracted [40/85] paintings (fused dim: 1632).
+2026-10-28 17:34:57,463 [INFO] Extracted [45/85] paintings (fused dim: 1632).
+2026-10-28 17:35:01,672 [INFO] Extracted [50/85] paintings (fused dim: 1632).
+2026-10-28 17:35:05,322 [INFO] Extracted [55/85] paintings (fused dim: 1632).
+2026-10-28 17:35:09,829 [INFO] Extracted [60/85] paintings (fused dim: 1632).
+2026-10-28 17:35:13,525 [INFO] Extracted [65/85] paintings (fused dim: 1632).
+2026-10-28 17:35:17,585 [INFO] Extracted [70/85] paintings (fused dim: 1632).
+2026-10-28 17:35:21,029 [INFO] Extracted [75/85] paintings (fused dim: 1632).
+2026-10-28 17:35:25,694 [INFO] Extracted [80/85] paintings (fused dim: 1632).
+2026-10-28 17:35:30,087 [INFO] Extracted [85/85] paintings (fused dim: 1632).
+2026-10-28 17:35:30,140 [INFO] Saved fused feature matrix of shape (85, 1632) to data\cache\fused_test_vit_b_16.npz
+2026-10-28 17:35:30,144 [INFO] Fused Feature Dimension: 1632 (Train: 393, Val: 84, Test: 85)
+2026-10-28 17:35:30,144 [INFO] === STEP 3: Training Multi-Head Neural Classifier ===
+2026-10-28 17:35:30,152 [INFO] Target 'raga': 4 classes. Balanced weights computed.
+2026-10-28 17:35:30,154 [INFO] Target 'school': 2 classes. Balanced weights computed.
+2026-10-28 17:35:30,157 [INFO] Target 'period': 6 classes. Balanced weights computed.
+2026-10-28 17:35:30,159 [INFO] Target 'artist': 3 classes. Balanced weights computed.
+2026-10-28 17:35:30,183 [INFO] Starting Multi-Head training for 100 epochs on device: cuda
+2026-10-28 17:35:34,887 [INFO] Epoch [05/100] Train Loss: 2.5415 | Val Loss: 2.8428 | Val Acc: 87.26%
+2026-10-28 17:35:38,000 [INFO] Epoch [10/100] Train Loss: 1.4008 | Val Loss: 3.3372 | Val Acc: 85.44%
+2026-10-28 17:35:40,819 [INFO] Epoch [15/100] Train Loss: 0.7545 | Val Loss: 5.6169 | Val Acc: 86.36%
+2026-10-28 17:35:42,302 [INFO] Early stopping triggered at epoch 18. Best Val Loss: 2.5066
+2026-10-28 17:35:42,318 [INFO] Multi-Head model training complete.
+2026-10-28 17:35:42,337 [INFO] Multi-Head checkpoint saved to: models\multihead_fused_classifier.pt
+2026-10-28 17:35:42,338 [INFO] === STEP 4: Evaluating Multi-Head Classifier on Test Split ===
+2026-10-28 17:35:44,245 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_raga.png
+2026-10-28 17:35:44,825 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_school.png
+2026-10-28 17:35:45,550 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_period.png
+2026-10-28 17:35:46,140 [INFO] Saved confusion matrix plot to reports\multihead_confusion_matrix_artist.png
+2026-10-28 17:35:46,145 [INFO] Saved benchmark metrics to reports\multihead_benchmark.json
+2026-10-28 17:35:46,149 [INFO] Saved benchmark markdown report to reports\multihead_benchmark.md
+2026-10-28 17:35:46,153 [INFO] Phase 7 Report generated at: reports\multihead_training_report.md

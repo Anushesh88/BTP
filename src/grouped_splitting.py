@@ -23,7 +23,8 @@ from pathlib import Path
 from collections import Counter, defaultdict
 import pandas as pd
 
-def perform_grouped_split(data_dir: str = "data", seed: int = 42):
+def perform_grouped_split(data_dir: str = "data", seed: int = 42, refine_groups: bool = True,
+                          use_image_similarity: bool = True):
     data_path = Path(data_dir)
     metadata_dir = data_path / "metadata"
     manifest_path = metadata_dir / "dataset_manifest.parquet"
@@ -33,6 +34,18 @@ def perform_grouped_split(data_dir: str = "data", seed: int = 42):
         df = pd.read_csv(manifest_path)
     else:
         df = pd.read_parquet(manifest_path)
+
+    # 2.1 refinement: series named in titles/captions, single-source collections,
+    # near-duplicate images, exact duplicates (see src/group_refinement.py)
+    if refine_groups:
+        from src.group_refinement import compute_all_embeddings, refine_group_keys
+        embeddings = compute_all_embeddings(df) if use_image_similarity else None
+        df, refinement_report = refine_group_keys(df, embeddings)
+        print(f"[Split] Group refinement: {refinement_report['groups_before']} -> {refinement_report['groups_after']} groups, "
+              f"{refinement_report['paintings_regrouped']} paintings regrouped, "
+              f"{len(refinement_report['exact_duplicates_removed'])} exact duplicate(s) removed")
+        with open(metadata_dir / "group_refinement_report.json", "w", encoding="utf-8") as f:
+            json.dump(refinement_report, f, indent=2)
 
     records = df.to_dict(orient="records")
     total_samples = len(records)
@@ -52,9 +65,22 @@ def perform_grouped_split(data_dir: str = "data", seed: int = 42):
     print(f"[Split] Target split counts: Train={target_train} (70%), Val={target_val} (15%), Test={target_test} (15%)")
 
     # Multi-objective optimization for optimal grouped stratified partition
-    # Group ms_cma_tutinama (153 folios) must belong to Train (since Val/Test are ~85 each)
-    fixed_train = ['ms_cma_tutinama']
+    # Groups larger than the val/test targets (e.g. the 153-folio Tuti-nama, the 116 detail
+    # studies) cannot fit in val or test, so they are assigned to Train
+    fixed_train = sorted(g for g in groups if len(groups[g]) > target_val)
+    print(f"[Split] Groups too large for val/test, fixed to Train: {[(g, len(groups[g])) for g in fixed_train]}")
     other_groups = [g for g in groups if g not in fixed_train]
+
+    minority_label_tests = [
+        lambda p: p['school'] == 'Rajasthani',
+        lambda p: str(p['raga']) not in ('None', 'nan', ''),
+        lambda p: p['category'] == 'Ragamala Paintings',
+        # Periods outside the two large fixed-to-Train groups (Akbar-era Tuti-nama, detail studies)
+        lambda p: p['period'] in ('Late Mughal / 18th Century', '18th Century'),
+        lambda p: p['period'] == 'Shah Jahan Period (c. 1628-1658)',
+        lambda p: p['period'] == 'Aurangzeb Period (c. 1658-1707)',
+        lambda p: p['period'] == 'Jahangir Period (c. 1605-1627)',
+    ]
 
     random.seed(seed)
     best_score = float('inf')
@@ -103,15 +129,14 @@ def perform_grouped_split(data_dir: str = "data", seed: int = 42):
         # 1. Size deviation
         sz_pen = (len(tr_items) - target_train)**2 + (len(va_items) - target_val)**2 + (len(te_items) - target_test)**2
         
-        # 2. Category balance
+        # 2. Minority-label balance: each split should hold its share of the rare labels the
+        # model must learn (Rajasthani school, Ragamala paintings). Crop balance is not targeted:
+        # the 116 single-source detail studies are one group and must sit in Train.
         cat_pen = 0
-        for cat in ['Mughal Miniature Paintings', 'Painting Crops', 'Ragamala Paintings']:
-            total_cat = sum(1 for p in records if p['category'] == cat)
-            ideal = total_cat / total_samples
-            c_tr = sum(1 for p in tr_items if p['category'] == cat) / max(1, len(tr_items))
-            c_va = sum(1 for p in va_items if p['category'] == cat) / max(1, len(va_items))
-            c_te = sum(1 for p in te_items if p['category'] == cat) / max(1, len(te_items))
-            cat_pen += (c_tr - ideal)**2 + (c_va - ideal)**2 + (c_te - ideal)**2
+        for share_in in minority_label_tests:
+            ideal = sum(1 for p in records if share_in(p)) / total_samples
+            for items in (tr_items, va_items, te_items):
+                cat_pen += (sum(1 for p in items if share_in(p)) / max(1, len(items)) - ideal) ** 2
 
         # 3. School presence
         school_pen = 0

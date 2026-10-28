@@ -1,116 +1,112 @@
 {
   "summary": {
-    "total_samples": 564,
-    "train_samples": 395,
-    "train_ratio": 0.7004,
-    "val_samples": 85,
-    "val_ratio": 0.1507,
-    "test_samples": 84,
-    "test_ratio": 0.1489,
-    "train_groups": 216,
-    "val_groups": 60,
-    "test_groups": 65,
+    "total_samples": 562,
+    "train_samples": 393,
+    "train_ratio": 0.6993,
+    "val_samples": 84,
+    "val_ratio": 0.1495,
+    "test_samples": 85,
+    "test_ratio": 0.1512,
+    "train_groups": 67,
+    "val_groups": 71,
+    "test_groups": 73,
     "group_leakage": false
   },
   "distributions": {
     "category": {
       "train": {
-        "Mughal Miniature Paintings": 276,
-        "Painting Crops": 94,
-        "Ragamala Paintings": 25
+        "Painting Crops": 132,
+        "Mughal Miniature Paintings": 242,
+        "Ragamala Paintings": 19
       },
       "val": {
-        "Mughal Miniature Paintings": 61,
-        "Painting Crops": 19,
-        "Ragamala Paintings": 5
+        "Mughal Miniature Paintings": 76,
+        "Ragamala Paintings": 8
       },
       "test": {
-        "Mughal Miniature Paintings": 58,
-        "Painting Crops": 21,
-        "Ragamala Paintings": 5
+        "Mughal Miniature Paintings": 75,
+        "Ragamala Paintings": 8,
+        "Painting Crops": 2
       }
     },
     "school": {
       "train": {
-        "Mughal": 356,
-        "Rajasthani": 39
+        "Mughal": 359,
+        "Rajasthani": 33,
+        "Provincial Mughal": 1
       },
       "val": {
-        "Mughal": 82,
-        "Rajasthani": 3
+        "Mughal": 78,
+        "Rajasthani": 5,
+        "Pahari": 1
       },
       "test": {
-        "Mughal": 78,
-        "Rajasthani": 4,
-        "Provincial Mughal": 1,
-        "Pahari": 1
+        "Mughal": 77,
+        "Rajasthani": 8
       }
     },
     "period": {
       "train": {
-        "Akbar Period (c. 1556-1605)": 193,
-        "Classical Mughal (16th-17th Century)": 77,
-        "Jahangir Period (c. 1605-1627)": 12,
-        "Unknown": 82,
-        "Late Mughal / 18th Century": 14,
-        "Shah Jahan Period (c. 1628-1658)": 8,
-        "Aurangzeb Period (c. 1658-1707)": 9
-      },
-      "val": {
-        "Akbar Period (c. 1556-1605)": 12,
-        "Classical Mughal (16th-17th Century)": 19,
-        "Shah Jahan Period (c. 1628-1658)": 3,
-        "Unknown": 33,
-        "Aurangzeb Period (c. 1658-1707)": 1,
-        "Jahangir Period (c. 1605-1627)": 4,
-        "18th Century": 1,
-        "Late Mughal / 18th Century": 12
-      },
-      "test": {
-        "Unknown": 25,
-        "Classical Mughal (16th-17th Century)": 19,
-        "Akbar Period (c. 1556-1605)": 16,
-        "Late Mughal / 18th Century": 6,
-        "Shah Jahan Period (c. 1628-1658)": 6,
-        "Aurangzeb Period (c. 1658-1707)": 4,
-        "Jahangir Period (c. 1605-1627)": 5,
+        "Classical Mughal (16th-17th Century)": 115,
+        "Jahangir Period (c. 1605-1627)": 10,
+        "Akbar Period (c. 1556-1605)": 174,
+        "Unknown": 57,
+        "Late Mughal / 18th Century": 15,
+        "Aurangzeb Period (c. 1658-1707)": 7,
+        "Shah Jahan Period (c. 1628-1658)": 12,
         "16th Century": 1,
         "18th Century": 2
+      },
+      "val": {
+        "Late Mughal / 18th Century": 9,
+        "Unknown": 43,
+        "Akbar Period (c. 1556-1605)": 23,
+        "Jahangir Period (c. 1605-1627)": 4,
+        "Shah Jahan Period (c. 1628-1658)": 2,
+        "Aurangzeb Period (c. 1658-1707)": 3
+      },
+      "test": {
+        "Unknown": 39,
+        "Akbar Period (c. 1556-1605)": 23,
+        "Aurangzeb Period (c. 1658-1707)": 4,
+        "Jahangir Period (c. 1605-1627)": 7,
+        "Late Mughal / 18th Century": 8,
+        "Shah Jahan Period (c. 1628-1658)": 3,
+        "18th Century": 1
       }
     },
     "artist": {
       "train": {
-        "Unknown": 391,
-        "Ustad Mansur": 4
+        "Unknown": 388,
+        "Ustad Mansur": 4,
+        "Bishandas": 1
       },
       "val": {
-        "Unknown": 85
+        "Unknown": 83,
+        "Dhanu": 1
       },
       "test": {
-        "Unknown": 81,
-        "Bishandas": 1,
-        "Dhanu": 1,
+        "Unknown": 84,
         "Ustad Mansur": 1
       }
     },
     "raga": {
       "train": {
-        "None": 355,
-        "Saindhavi Raga/Ragini": 1,
-        "Ragamala (Unspecified)": 31,
-        "Kamod Raga/Ragini": 1,
-        "Shri Raga/Ragini": 6,
-        "Kakubha Raga/Ragini": 1
+        "None": 360,
+        "Ragamala (Unspecified)": 25,
+        "Shri Raga/Ragini": 7,
+        "Saindhavi Raga/Ragini": 1
       },
       "val": {
-        "None": 80,
-        "Ragamala (Unspecified)": 3,
-        "Shri Raga/Ragini": 2
+        "None": 76,
+        "Ragamala (Unspecified)": 8
       },
       "test": {
-        "None": 79,
-        "Shri Raga/Ragini": 1,
-        "Ragamala (Unspecified)": 4
+        "None": 76,
+        "Kakubha Raga/Ragini": 1,
+        "Ragamala (Unspecified)": 5,
+        "Shri Raga/Ragini": 2,
+        "Kamod Raga/Ragini": 1
       }
     }
   }

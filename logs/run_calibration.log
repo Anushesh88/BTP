@@ -1,22 +1,22 @@
-2026-10-21 12:08:15,698 [INFO] === STEP 1: Ingesting Manifest & Grouped Splits ===
-2026-10-21 12:08:15,787 [INFO] Loaded frozen splits from data\metadata: Train=395, Val=85, Test=84
-2026-10-21 12:08:15,787 [INFO] === STEP 2: Loading Trained Multi-Head Model (models\multihead_fused_classifier.pt) ===
-2026-10-21 12:08:15,866 [INFO] Multi-Head checkpoint successfully loaded from: models\multihead_fused_classifier.pt
-2026-10-21 12:08:15,867 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
-2026-10-21 12:08:16,499 [INFO] Frozen backbone initialized. Feature dimension: 768
-2026-10-21 12:08:16,747 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
-2026-10-21 12:08:16,748 [INFO] Loading cached fused features from: data\cache\fused_val_vit_b_16.npz
-2026-10-21 12:08:16,752 [INFO] Loading cached fused features from: data\cache\fused_test_vit_b_16.npz
-2026-10-21 12:08:16,755 [INFO] === STEP 3: Computing Validation Logits & Fitting Temperature Scalers ===
-2026-10-21 12:08:16,884 [INFO] Fitting temperature scaling for head: 'raga' (85 samples)...
-2026-10-21 12:08:16,898 [INFO] Learned optimal temperature T = 0.8276
-2026-10-21 12:08:16,898 [INFO] Fitting temperature scaling for head: 'school' (85 samples)...
-2026-10-21 12:08:16,901 [INFO] Learned optimal temperature T = 1.5180
-2026-10-21 12:08:16,901 [INFO] Fitting temperature scaling for head: 'period' (52 samples)...
-2026-10-21 12:08:16,903 [INFO] Learned optimal temperature T = 0.8606
-2026-10-21 12:08:16,903 [INFO] Fitting temperature scaling for head: 'artist' (85 samples)...
-2026-10-21 12:08:16,907 [INFO] Learned optimal temperature T = 0.0540
-2026-10-21 12:08:16,907 [INFO] Saved temperature scalers to models\temperature_scalers.json
-2026-10-21 12:08:16,907 [INFO] === STEP 4: Evaluating Calibration (ECE, MCE, Brier Score) on Test Split ===
-2026-10-21 12:08:17,993 [INFO] Saved reliability diagrams to reports\reliability_diagrams.png
-2026-10-21 12:08:17,996 [INFO] Phase 8 Calibration Report generated at: reports\calibration_report.md
+2026-10-28 17:36:05,612 [INFO] === STEP 1: Ingesting Manifest & Grouped Splits ===
+2026-10-28 17:36:05,727 [INFO] Loaded frozen splits from data\metadata: Train=393, Val=84, Test=85
+2026-10-28 17:36:05,727 [INFO] === STEP 2: Loading Trained Multi-Head Model (models\multihead_fused_classifier.pt) ===
+2026-10-28 17:36:05,842 [INFO] Multi-Head checkpoint successfully loaded from: models\multihead_fused_classifier.pt
+2026-10-28 17:36:05,843 [INFO] Initializing frozen vision backbone: vit_b_16 (pretrained=True)
+2026-10-28 17:36:06,785 [INFO] Frozen backbone initialized. Feature dimension: 768
+2026-10-28 17:36:07,097 [INFO] DualBranchFusionPipeline ready: Deep dim=768, Handcrafted dim=96
+2026-10-28 17:36:07,100 [INFO] Loading cached fused features from: data\cache\fused_val_vit_b_16.npz
+2026-10-28 17:36:07,107 [INFO] Loading cached fused features from: data\cache\fused_test_vit_b_16.npz
+2026-10-28 17:36:07,111 [INFO] === STEP 3: Computing Validation Logits & Fitting Temperature Scalers ===
+2026-10-28 17:36:07,600 [INFO] Fitting temperature scaling for head: 'raga' (84 samples)...
+2026-10-28 17:36:07,648 [INFO] Learned optimal temperature T = 0.7145
+2026-10-28 17:36:07,648 [INFO] Fitting temperature scaling for head: 'school' (83 samples)...
+2026-10-28 17:36:07,652 [INFO] Learned optimal temperature T = 1.3268
+2026-10-28 17:36:07,652 [INFO] Fitting temperature scaling for head: 'period' (41 samples)...
+2026-10-28 17:36:07,655 [INFO] Learned optimal temperature T = 0.9685
+2026-10-28 17:36:07,655 [INFO] Fitting temperature scaling for head: 'artist' (83 samples)...
+2026-10-28 17:36:07,658 [INFO] Learned optimal temperature T = 0.1144
+2026-10-28 17:36:07,659 [INFO] Saved temperature scalers to models\temperature_scalers.json
+2026-10-28 17:36:07,659 [INFO] === STEP 4: Evaluating Calibration (ECE, MCE, Brier Score) on Test Split ===
+2026-10-28 17:36:09,274 [INFO] Saved reliability diagrams to reports\reliability_diagrams.png
+2026-10-28 17:36:09,277 [INFO] Phase 8 Calibration Report generated at: reports\calibration_report.md
